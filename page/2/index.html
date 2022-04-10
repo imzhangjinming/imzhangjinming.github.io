@@ -162,6 +162,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-asm-ch11-ch12" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/09/24/asm-ch11-ch12/">汇编语言 第十一、十二章 含检测点和实验十一、十二</a>
+    </h1>
+  
+
+        
+        <a href="/2021/09/24/asm-ch11-ch12/" class="archive-article-date">
+  	<time datetime="2021-09-23T19:27:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第十一章 标志寄存器</p>
+<p>第十二章 内中断</p>
+        
+          <a class="article-more-a" href="/2021/09/24/asm-ch11-ch12/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      <!--显示阅读次数-->
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/09/24/asm-ch11-ch12/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-asm-ch9-ch10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -830,106 +910,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/08/22/CSAPP-Ch1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-APUE-Ch17" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/20/APUE-Ch17/">UNIX环境高级编程 第十七章 高级进程间通信</a>
-    </h1>
-  
-
-        
-        <a href="/2021/08/20/APUE-Ch17/" class="archive-article-date">
-  	<time datetime="2021-08-20T12:15:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="第十七章-高级进程间通信"><a href="#第十七章-高级进程间通信" class="headerlink" title="第十七章 高级进程间通信"></a>第十七章 高级进程间通信</h1><h2 id="17-2-UNIX域套接字"><a href="#17-2-UNIX域套接字" class="headerlink" title="17.2 UNIX域套接字"></a>17.2 UNIX域套接字</h2><p>用于在<strong>同一台</strong>计算机上运行的进程间通信。像是套接字和管道的组合</p>
-<p>使用 <code>socketpair</code> 函数创建一对无命名的、相互连接的UNIX域套接字</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/socket.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">socketpair</span><span class="params">(<span class="keyword">int</span> domain, <span class="keyword">int</span> type, <span class="keyword">int</span> protocol, <span class="keyword">int</span> sockfd[<span class="number">2</span>])</span></span>;</span><br><span class="line"><span class="comment">//Returns: 0 if OK, −1 on error</span></span><br></pre></td></tr></table></figure>
-<img src="/2021/08/20/APUE-Ch17/Snipaste_2021-08-18_14-45-08.png" class="">
-<p>一对相互连接的UNIX域套接字可以起到全双工管道的作用，两端都对<strong>读和写</strong>开放</p>
-<p><strong>命名UNIX域套接字</strong></p>
-<p>就像网络域套接字一样，可以把一个地址绑定到UNIX域套接字上。</p>
-<p>UNIX域套接字地址由 <code>sockaddr_un</code> 结构表示</p>
-<p>Linux 和 Solaris 实现</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_un</span> &#123;</span></span><br><span class="line">	<span class="keyword">sa_family_t</span> sun_family;		<span class="comment">/* AF_UNIX */</span></span><br><span class="line">	<span class="keyword">char</span> 		sun_path[<span class="number">108</span>];	<span class="comment">/* pathname */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>FreeBSD 和 Mac OS 实现</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_un</span> &#123;</span></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">char</span> 	sun_len; 		<span class="comment">/* sockaddr length */</span></span><br><span class="line">	<span class="keyword">sa_family_t</span> 	sun_family;		<span class="comment">/* AF_UNIX */</span></span><br><span class="line">	<span class="keyword">char</span> 			sun_path[<span class="number">104</span>];	<span class="comment">/* pathname */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>绑定地址的时候，系统会使用 <code>sun_path</code> 指定的路径名创建一个文件，如果该文件已经存在，则 <code>bind</code> 请求失败</p>
-<p>还要注意的是关闭套接字的时候并<strong>不自动删除</strong>该文件，所以要在程序退出前对该文件执行<strong>解除链接</strong> 的操作</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/imzhangjinming/APUE/blob/master/17/bind_addr_unix_socket.c">将地址绑定到UNIX域套接字</a></p>
-<h2 id="17-3-唯一连接"><a href="#17-3-唯一连接" class="headerlink" title="17.3 唯一连接"></a>17.3 唯一连接</h2><p>开发3个函数，在同一台计算机上的两个无关进程之间建立<strong>唯一</strong>连接</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;apue.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">serv_listen</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *name)</span></span>;</span><br><span class="line"><span class="comment">//Returns: file descriptor to listen on if OK, negative value on error</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">serv_accept</span><span class="params">(<span class="keyword">int</span> listenfd, <span class="keyword">uid_t</span> *uidptr)</span></span>;</span><br><span class="line"><span class="comment">//Returns: new file descriptor if OK, negative value on error</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cli_conn</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *name)</span></span>;</span><br><span class="line"><span class="comment">//Returns: file descriptor if OK, negative value on error</span></span><br></pre></td></tr></table></figure>
-<p><code>serv_listen</code> 函数的 <code>name</code> 参数声明了服务器将在这个文件上监听客户的连接请求，此函数的返回值是用于接收客户连接请求的服务器UNIX域套接字</p>
-<p>服务器进程使用 <code>serv_accept</code> 函数等待客户进程连接请求的到达。当客户请求到达时，服务器自动创建一个新的UNIX域套接字并将它与客户端套接字相连</p>
-<p>客户进程使用 <code>cli_conn</code> 函数连接至服务器进程，<code>name</code> 参数就是 调用 <code>serv_listen</code> 是指定的 <code>name</code> ，此函数返回值是连接到服务器进程的文件描述符</p>
-<p>三个函数的实现：</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/imzhangjinming/APUE/blob/master/17/serv_listen.c">serv_listen</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/imzhangjinming/APUE/blob/master/17/serv_accept.c">serv_accept</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/imzhangjinming/APUE/blob/master/17/cli_conn.c">cli_conn</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      <!--显示阅读次数-->
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/08/20/APUE-Ch17/">展开全文 >></a>
         </p>
       
 
