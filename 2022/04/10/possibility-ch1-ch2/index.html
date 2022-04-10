@@ -225,10 +225,10 @@ A \cup \bar{A} = \Omega\ ,A \cap \bar{A} = \varnothing</script><p>记录一个�
 <ol>
 <li>$\Omega\in \mathscr{F}$,</li>
 <li>$A\in \mathscr{F}$,则对立事件$\overline{A}\in \mathscr{F}$,</li>
-<li>若$A<em>n\in \mathscr{F},n=1,2,\cdots$，则可列并$\bigcup</em>{n=1}^{\infty}A_n \in \mathscr{F}$.</li>
+<li>若$A_n\in \mathscr{F},n=1,2,\cdots$，则可列并$\bigcup_{n=1}^{\infty}A_n \in \mathscr{F}$.</li>
 </ol>
 <p>则称$\mathscr{F}$为一个<strong>事件域</strong>，又称为$\sigma$域或$\sigma$代数。</p>
-<p>在概率论中，称$(\Omega,\ \mathscr{F})$为可测空间，这里的<strong>可测</strong>是说$\mathscr{F}$中都是有概率可言的<strong>事件</strong>。既然$\mathscr{F}$中都是事件，那么就说明$\mathscr{F}$是由集合组成的，也就是说集合类中都是集合。</p>
+<p>在概率论中，称$(\Omega, \mathscr{F})$为可测空间，这里的<strong>可测</strong>是说$\mathscr{F}$中都是有概率可言的<strong>事件</strong>。既然$\mathscr{F}$中都是事件，那么就说明$\mathscr{F}$是由集合组成的，也就是说集合类中都是集合。</p>
 <p>关于集合类的说明，引用知乎博主<a target="_blank" rel="noopener" href="https://www.zhihu.com/people/leo-leo-12-95">LEO LEO</a>在文章<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/133362813">概率论基础-01: 集合类</a>中说的</p>
 <blockquote>
 <p>由集合组成的大家庭就叫做集合类(也叫做 集类,集合系 set class, 集合里面装得都是一个又一个的集合). </p>
@@ -239,12 +239,12 @@ A \cup \bar{A} = \Omega\ ,A \cap \bar{A} = \varnothing</script><p>记录一个�
 <p>11.设$\mathscr{F}$为一事件域，若$A_n\in \mathscr{F},n=1,2,\cdots$，试证明：</p>
 <p>​    （1）$\varnothing \in \mathscr{F}$;</p>
 <p>​            由事件域定义知，$\Omega \in \mathscr{F}$ 且  $\overline{\Omega} \in \mathscr{F}$，即 $\varnothing \in \mathscr{F}$</p>
-<p>​    （2）有限并$\bigcup_{i=1}^{n}A_i \in \mathscr{F},\ n\ge 1$;</p>
-<p>​            由事件域定义知可列并$\bigcup<em>{n=1}^{\infty}A_n \in \mathscr{F}$，令$A_i = \varnothing,\ i=n+1,\cdots,\infty$即可得$\bigcup</em>{i=1}^{n}A_i \in \mathscr{F},\ n\ge 1$</p>
+<p>​    （2）有限并$\bigcup_{i=1}^{n}A_i \in \mathscr{F}, n\ge 1$;</p>
+<p>​            由事件域定义知可列并$\bigcup_{n=1}^{\infty}A_n \in \mathscr{F}$，令$A_i = \varnothing, i=n+1,\cdots,\infty$即可得$\bigcup_{i=1}^{n}A_i \in \mathscr{F}, n\ge 1$</p>
 <p>​    （3）有限交$\bigcap_{i=1}^{n}A_i \in \mathscr{F}$;</p>
-<p>​            $\bigcap<em>{i=1}^{n}A_i =\overline{\bigcup</em>{i=1}^{n}\overline{A_i}} \in \mathscr{F}$</p>
+<p>​            $\bigcap_{i=1}^{n}A_i =\overline{\bigcup_{i=1}^{n}\overline{A_i}} \in \mathscr{F}$</p>
 <p>​    （4）可列交$\bigcap_{i=1}^{\infty}A_i \in \mathscr{F}$;</p>
-<p>​            $\bigcap<em>{i=1}^{\infty}A_i = \overline{\bigcup</em>{i=1}^{\infty}\overline{A_i}}\in \mathscr{F}$</p>
+<p>​            $\bigcap_{i=1}^{\infty}A_i = \overline{\bigcup_{i=1}^{\infty}\overline{A_i}}\in \mathscr{F}$</p>
 <p>​    （5）差运算$A_1-A_2\in \mathscr{F}$.</p>
 <p>​            $A_1-A_2 = A\overline{A_2}\in \mathscr{F}$</p>
 <p>作者就是想通过这个证明题告诉我们，事件域的定义给出了<strong>样本空间子集</strong>之间运算的所有可能结果。</p>
@@ -286,7 +286,7 @@ P(A)=\frac{k}{n}</script><h3 id="1-2-5-确定概率的几何方法"><a href="#1-
 </ul>
 <script type="math/tex; mode=display">
 P(A)=\frac{S_A}{S_{\Omega}}</script><h3 id="习题1-2"><a href="#习题1-2" class="headerlink" title="习题1.2"></a>习题1.2</h3><p><strong>1.对于组合数$\binom{n}{r}$，证明：</strong></p>
-<p>​    （5）$\binom{a}{0}\binom{b}{n}+\binom{a}{1}\binom{b}{n-1}+\cdots+\binom{a}{n}\binom{b}{0}=\binom{a+b}{n},\ n=min{a,b}$</p>
+<p>​    （5）$\binom{a}{0}\binom{b}{n}+\binom{a}{1}\binom{b}{n-1}+\cdots+\binom{a}{n}\binom{b}{0}=\binom{a+b}{n}, n=min\{a,b\}$</p>
 <p>​    这一问考虑实际意义更加方便，从$a+b$个小球中取出$n$个小球，有多少种取法？</p>
 <p>​    等式左边是先从$a$个球中取$r$个，再从$b$个球中取$n-r$个球，等式右边是直接从所有球中取出$n$个。最终的取法数量是相等的</p>
 <p>​    （6）$\binom{n}{0}^2+\binom{n}{1}^2+\cdots+\binom{n}{n}^2=\binom{2n}{n}$</p>
@@ -303,7 +303,7 @@ P(A)=\frac{C_5^1C_4^1C_3^1C_2^1}{(C_6^2C_4^2C_2^2)^2}=\frac{2}{135}</script><p><
 <p>$n$个0形成了$n+1$个空隙，放入$n$个1的可能方案有$C_{n+1}^n=n+1$种，所以概率为</p>
 <script type="math/tex; mode=display">
 P=\frac{C_{n+1}^n}{C_{2n}^{n}}=\frac{n+1}{\binom{2n}{n}}</script><h2 id="1-3-概率的性质"><a href="#1-3-概率的性质" class="headerlink" title="1.3 概率的性质"></a>1.3 概率的性质</h2><p>性质1.3.1 $P(\varnothing)=0$</p>
-<p>性质1.3.2 若有限个事件$A_1,\ A_2,\ \cdots,\ A_n$互不相容，则有</p>
+<p>性质1.3.2 若有限个事件$A_1, A_2, \cdots, A_n$互不相容，则有</p>
 <script type="math/tex; mode=display">
 P(\bigcup_{i=1}^{n}A_i)=\sum_{i=1}^{n}P(A_i)</script><p>性质1.3.3 对任一事件$A$，有</p>
 <script type="math/tex; mode=display">
@@ -331,10 +331,10 @@ P(\bigcup_{i=1}^{n}A_i)=&\sum_{i=1}^{n}P(A_i)-\sum_{1\le i \lt j \le n}{P(A_iA_j
 <p>接着放标号为2的球，这里分为两种情况，</p>
 <p>1.标号为2的球放在1号盒子里</p>
 <img src="/2022/04/10/possibility-ch1-ch2/Snipaste_2022-03-15_21-59-59.png" class="">
-<p>此时剩下标号为3，4，5的球要完全错序地放在3，4，5号盒子里，一共有$P<em>{5-2}=P</em>{3}$种放法</p>
+<p>此时剩下标号为3，4，5的球要完全错序地放在3，4，5号盒子里，一共有$P_{5-2}=P_{3}$种放法</p>
 <p>2.标号为2的球不放在标号为1的盒子里，此时有标号为2，3，4，5的球和标号为1，3，4，5的盒子，且2号球不放在一号盒子里，那么这里就可以把1号盒子想象成2号盒子（因为这个时候1号盒子起到了2号盒子的作用，即2号球不能放入这个盒子），相当于把2，3，4，5号球完全错序地放入2，3，4，5号盒子里，共有$P_{5-1}=P_4$种放法</p>
-<p>综合上面两步，知道$P<em>5=(5-1)\times(P</em>{5-2}+P_{5-1})=4\times(2+9)=44$</p>
-<p>由此得到递推公式$P<em>n=(n-1)(P</em>{n-1}+P_{n-2})$</p>
+<p>综合上面两步，知道$P_5=(5-1)\times(P_{5-2}+P_{5-1})=4\times(2+9)=44$</p>
+<p>由此得到递推公式$P_n=(n-1)(P_{n-1}+P_{n-2})$</p>
 <p>求得通项公式为 </p>
 <script type="math/tex; mode=display">
 P_n=\sum_{i=2}^{n}(-1)^i\frac{n!}{i!},\ n\ge2</script><p>所以</p>
@@ -350,10 +350,10 @@ P(A|B)=\frac{P(AB)}{P(B)}</script><p>为在$B$ 发生下$A$的条件概率</p>
 </ul>
 <script type="math/tex; mode=display">
 P(AB)=P(B)P(A|B)</script><ul>
-<li>若$P(A<em>1A_2\cdots A</em>{n-1})&gt;0$，则</li>
+<li>若$P(A_1A_2\cdots A_{n-1})&gt;0$，则</li>
 </ul>
 <script type="math/tex; mode=display">
-P(A_1A_2\cdots A_{n-1}A_n)=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)\cdots P(A_n|A_1\cdots A_{n-1})</script><h3 id="1-4-3-全概率公式"><a href="#1-4-3-全概率公式" class="headerlink" title="1.4.3 全概率公式"></a>1.4.3 全概率公式</h3><p>性质1.4.3 设$B<em>1, B_2,\cdots ,B_n$为样本空间$\Omega$的一个分割，即$B_1, B_2,\cdots ,B_n$互不相容，且$\bigcup</em>{i=1}^{n}B_i=\Omega$，如果$P(B_i)&gt;0,\ i=1,2,\cdots,n$，则对任一事件$A$有</p>
+P(A_1A_2\cdots A_{n-1}A_n)=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)\cdots P(A_n|A_1\cdots A_{n-1})</script><h3 id="1-4-3-全概率公式"><a href="#1-4-3-全概率公式" class="headerlink" title="1.4.3 全概率公式"></a>1.4.3 全概率公式</h3><p>性质1.4.3 设$B_1, B_2,\cdots ,B_n$为样本空间$\Omega$的一个分割，即$B_1, B_2,\cdots ,B_n$互不相容，且$\bigcup_{i=1}^{n}B_i=\Omega$，如果$P(B_i)&gt;0, i=1,2,\cdots,n$，则对任一事件$A$有</p>
 <script type="math/tex; mode=display">
 P(A)=\sum_{i=1}^{n}P(B_i)P(A|B_i)</script><h3 id="1-4-4-贝叶斯公式"><a href="#1-4-4-贝叶斯公式" class="headerlink" title="1.4.4 贝叶斯公式"></a>1.4.4 贝叶斯公式</h3><p>性质1.4.4 设$B_1,B_2,\cdots,B_n$是样本空间$\Omega$的一个分割，如果$P(A)&gt;0,P(B_i)&gt;0,i=1,2,\cdots,n$，则</p>
 <script type="math/tex; mode=display">
@@ -395,7 +395,7 @@ F(x)=P(X\le x)</script><p>为随机变量$X$的分布函数。且称$X$服从$F(
 </ul>
 <h3 id="2-1-3-离散随机变量的概率分布列"><a href="#2-1-3-离散随机变量的概率分布列" class="headerlink" title="2.1.3 离散随机变量的概率分布列"></a>2.1.3 离散随机变量的概率分布列</h3><p><strong>定义</strong> 设$X$是一个离散随机变量，如果$X$的所有可能取值是$x_1,x_2,\cdots ,x_n,\cdots ,$ 则称$X$取$x_i$的概率</p>
 <script type="math/tex; mode=display">
-p_i = p(x_i) = P(X=x_i),\ i=1,2,\cdots ,n,\cdots</script><p>为$X$的概率分布列或分布列，记为$X\sim {p_i}$</p>
+p_i = p(x_i) = P(X=x_i),\ i=1,2,\cdots ,n,\cdots</script><p>为$X$的概率分布列或分布列，记为$X\sim \{p_i\}$</p>
 <h3 id="2-1-4-连续随机变量的概率密度函数"><a href="#2-1-4-连续随机变量的概率密度函数" class="headerlink" title="2.1.4 连续随机变量的概率密度函数"></a>2.1.4 连续随机变量的概率密度函数</h3><p>首先要指明的是，概率密度函数$p(x)$在某一点$x$的取值<strong>不是</strong>随机变量取$x$的<strong>概率</strong></p>
 <p>类比密度$\rho$，它需要乘以对应的度量（体积$v$）才能得到质量$m$</p>
 <p>概率密度函数也需要乘以对应的度量（$x$轴上的一个微元$dx$）才能得到概率，具体来说</p>
@@ -541,7 +541,7 @@ p(x)=
 0,\ x\le 0,\\
 2xe^{-x^2},\ x>0.
 \end{aligned}
-\end{cases}</script><p>$E(X)=\int<em>{0}^{\infty}2x^2e^{-x^2}dx=\frac{\sqrt{\pi}}{2}$ 关键词<strong>高斯积分</strong>，记住积分式$\int</em>{0}^{\infty}e^{-x^2}dx=\frac{\sqrt{\pi}}{2}$</p>
+\end{cases}</script><p>$E(X)=\int_{0}^{\infty}2x^2e^{-x^2}dx=\frac{\sqrt{\pi}}{2}$ 关键词<strong>高斯积分</strong>，记住积分式$\int_{0}^{\infty}e^{-x^2}dx=\frac{\sqrt{\pi}}{2}$</p>
 <p>$E(X^2)=\int_{0}^{\infty}2x^3e^{-x^2}dx=1$</p>
 <p>$Var(X)=E(X^2)-E(X)^2=1-\frac{\pi}{4}$</p>
 <h2 id="2-4-常用离散分布"><a href="#2-4-常用离散分布" class="headerlink" title="2.4 常用离散分布"></a>2.4 常用离散分布</h2><h3 id="2-4-1-二项分布"><a href="#2-4-1-二项分布" class="headerlink" title="2.4.1 二项分布"></a>2.4.1 二项分布</h3><p><strong>二项分布</strong> $X\sim b(n,p)$</p>
@@ -558,7 +558,7 @@ E(X)=&\ \sum_{k=0}^{n}k\binom{n}{k}p^k(1-p)^{n-k}\\
 <h3 id="2-4-2-泊松分布"><a href="#2-4-2-泊松分布" class="headerlink" title="2.4.2 泊松分布"></a>2.4.2 泊松分布</h3><p><strong>泊松分布</strong> $X\sim P(\lambda)$</p>
 <script type="math/tex; mode=display">
 P(X=k)=\frac{\lambda^k}{k!}e^{-\lambda},\ k=0,1,2,\cdots, \lambda>0</script><p><strong>期望和方差</strong></p>
-<p>$E(X)=\lambda,\ Var(X)=\lambda$</p>
+<p>$E(X)=\lambda, Var(X)=\lambda$</p>
 <p>泊松分布的期望和方差都是参数$\lambda$的值</p>
 <p><strong>泊松定理</strong> 在$n$重伯努利试验中，记事件$A$在一次试验中发生的概率为$p_n$（与试验次数$n$有关），如果当$n\to \infty$时，有$np_n\to \lambda$，则</p>
 <script type="math/tex; mode=display">
@@ -569,11 +569,11 @@ P(X=k)=\frac{\lambda^k}{k!}e^{-\lambda},\ k=0,1,2,\cdots, \lambda>0</script><p><
 <script type="math/tex; mode=display">
 P(X=k)=\frac{\binom{M}{k}\binom{N-M}{n-k}}{\binom{N}{n}},k=0,1,\cdots,r,\ r=\min\{M,n\},\ M\le N,\ n\le N</script><p>超几何分布可以用来描述<strong>不放回抽样</strong></p>
 <p><strong>期望和方差</strong></p>
-<p>$E(X)=n\frac{M}{N},\ Var(X)=\frac{nM(N-M)(N-n)}{N^2(N-1)}$</p>
+<p>$E(X)=n\frac{M}{N}, Var(X)=\frac{nM(N-M)(N-n)}{N^2(N-1)}$</p>
 <h3 id="2-4-4-几何分布与负二项分布"><a href="#2-4-4-几何分布与负二项分布" class="headerlink" title="2.4.4 几何分布与负二项分布"></a>2.4.4 几何分布与负二项分布</h3><p><strong>一、几何分布</strong> $X\sim Ge(p)$</p>
 <script type="math/tex; mode=display">
 P(X=k)=(1-p)^{k-1}p,\ k=1,2,\cdots</script><p><strong>期望和方差</strong></p>
-<p>$E(X)=\frac{1}{p},\ Var(X)=\frac{1-p}{p^2}$</p>
+<p>$E(X)=\frac{1}{p}, Var(X)=\frac{1-p}{p^2}$</p>
 <p><strong>几何分布的无记忆性</strong></p>
 <p>设$X\sim Ge(p)$，则对任意正整数$m$与$n$有</p>
 <script type="math/tex; mode=display">
@@ -584,7 +584,7 @@ P(X>m+n|X>m)=P(X>n)</script><p><strong>二、负二项分布（巴斯卡分布�
 P(X=k)=\binom{k-1}{r-1}p^{r}(1-p)^{k-r},\ k=r,r+1,\cdots</script><p>记为$X\sim Nb(r,p)$</p>
 </blockquote>
 <p><strong>期望和方差</strong></p>
-<p>$E(X)=\frac{r}{p},\ Var(X)=\frac{r(1-p)}{p^2}$</p>
+<p>$E(X)=\frac{r}{p}, Var(X)=\frac{r(1-p)}{p^2}$</p>
 <h3 id="习题-2-4"><a href="#习题-2-4" class="headerlink" title="习题 2.4"></a>习题 2.4</h3><p><strong>3.某优秀射手命中10环的概率为0.7，命中9环的概率为0.3.求该射手三次射击所得的环数不少于29环的概率</strong></p>
 <p>设随机变量$X$: 命中10环的次数</p>
 <p>$X\sim b(3,0.7)$</p>
@@ -601,7 +601,7 @@ P(X=2)+P(X=3)=&\ \binom{3}{2}0.7^2(1-0.7)^1+\binom{3}{3}0.7^3(1-0.7)^0\\
 p(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}},-\infty<x<\infty</script><p>$\mu$为位置参数，$\sigma$为尺度参数</p>
 <p>$N(0,1)$称为标准正态分布</p>
 <p><strong>期望和方差</strong></p>
-<p>$E(X)=\mu,\ Var(X)=\sigma^2$</p>
+<p>$E(X)=\mu, Var(X)=\sigma^2$</p>
 <p><strong>正态分布的$3\sigma$原则</strong></p>
 <p>设随机变量$X\sim N(\mu,\sigma^2)$，则</p>
 <script type="math/tex; mode=display">
@@ -628,7 +628,7 @@ F(x)=
 \displaystyle \frac{x-a}{b-a},\ a\le x<b,\\
 1,\ x\ge b.
 \end{cases}</script><p><strong>期望和方差</strong></p>
-<p>$E(X)=\displaystyle \frac{a+b}{2},\ Var(X)=\displaystyle \frac{(b-a)^2}{12}$</p>
+<p>$E(X)=\displaystyle \frac{a+b}{2}, Var(X)=\displaystyle \frac{(b-a)^2}{12}$</p>
 <h3 id="2-5-3-指数分布"><a href="#2-5-3-指数分布" class="headerlink" title="2.5.3 指数分布"></a>2.5.3 指数分布</h3><p><strong>指数分布</strong> $X\sim Exp(\lambda)$</p>
 <script type="math/tex; mode=display">
 p(x)=
@@ -641,7 +641,7 @@ F(x)=
 1-e^{-\lambda x},\ x\ge 0,\\
 0,\ x\lt 0.
 \end{cases}</script><p><strong>期望和方差</strong></p>
-<p>$E(X)=\displaystyle \frac{1}{\lambda},\ Var(X)=\displaystyle \frac{1}{\lambda ^2}$</p>
+<p>$E(X)=\displaystyle \frac{1}{\lambda}, Var(X)=\displaystyle \frac{1}{\lambda ^2}$</p>
 <p><strong>指数分布的无记忆性</strong></p>
 <p>如果随机变量$X\sim Exp(\lambda)$，则对任意$s&gt;0,t&gt;0$，有</p>
 <script type="math/tex; mode=display">
@@ -654,7 +654,7 @@ P(X>s+t|X>s)=P(X>t)</script><h3 id="2-5-4-伽马分布"><a href="#2-5-4-伽马�
 <li><p>$\Gamma(\alpha +1)=\alpha \Gamma(\alpha)$，如果$\alpha$为自然数$n$，有$\Gamma(n +1)=n \Gamma(n)=n!$</p>
 </li>
 </ul>
-<p><strong>伽马分布</strong> $X\sim Ga(\alpha,\lambda),\ \alpha&gt;0,\ \lambda&gt;0$</p>
+<p><strong>伽马分布</strong> $X\sim Ga(\alpha,\lambda), \alpha&gt;0, \lambda&gt;0$</p>
 <script type="math/tex; mode=display">
 p(x)=
 \begin{cases}
@@ -663,7 +663,7 @@ p(x)=
 \end{cases}</script><p>$\lambda$固定，$\alpha$取不同值时伽马分布密度函数的图像：</p>
 <img src="/2022/04/10/possibility-ch1-ch2/Snipaste_2022-03-16_22-06-12.png" class="">
 <p><strong>期望和方差</strong></p>
-<p>$E(X)=\displaystyle \frac{\alpha}{\lambda},\ Var(X)=\displaystyle \frac{\alpha}{\lambda ^2}$</p>
+<p>$E(X)=\displaystyle \frac{\alpha}{\lambda}, Var(X)=\displaystyle \frac{\alpha}{\lambda ^2}$</p>
 <h3 id="2-5-5-贝塔分布"><a href="#2-5-5-贝塔分布" class="headerlink" title="2.5.5 贝塔分布"></a>2.5.5 贝塔分布</h3><p><strong>贝塔函数</strong></p>
 <script type="math/tex; mode=display">
 B(a,b)=\int_{0}^{1}x^{a-1}(1-x)^{b-1}dx,\ a>0,b>0.</script><p>贝塔函数的性质：</p>
@@ -679,7 +679,7 @@ p(x)=
 0,\ 其他.
 \end{cases}</script><img src="/2022/04/10/possibility-ch1-ch2/Snipaste_2022-03-16_22-30-26.png" class="">
 <p><strong>期望和方差</strong></p>
-<p>$E(X)=\displaystyle \frac{a}{a+b},\ Var(X)=\displaystyle \frac{ab}{(a+b)^2(a+b+1)}$</p>
+<p>$E(X)=\displaystyle \frac{a}{a+b}, Var(X)=\displaystyle \frac{ab}{(a+b)^2(a+b+1)}$</p>
 <h3 id="习题2-5"><a href="#习题2-5" class="headerlink" title="习题2.5"></a>习题2.5</h3><p><strong>1.设随机变量$X$服从区间$(2,5)$上的均匀分布，求对$X$进行3次独立观测中，至少有两次观测值大于3的概率</strong></p>
 <p>$\displaystyle P(X&gt;3)=1-P(X\le 3)=1-\frac{3-2}{5-2}=\frac{2}{3}$</p>
 <p>设随机变量$Y$：观测试验中，观测值大于3的次数</p>
@@ -713,7 +713,7 @@ p(y)=
 \begin{cases}
 \displaystyle p_X[h(y)]|h^{'}(y)|,\ a<y<b,\\
 0,\ 其他.
-\end{cases}</script><p>$a=min({g(-\infty),g(\infty)}),\ b=max({g(-\infty),g(\infty)})$</p>
+\end{cases}</script><p>$a=min({g(-\infty),g(\infty)}), b=max({g(-\infty),g(\infty)})$</p>
 <p><strong>定理</strong> 设随机变量$X$服从正态分布$N(\mu,\sigma^2)$，则当$a\ne 0$时，有$Y=aX+b \sim N(a\mu +b,a^2\sigma^2)$</p>
 <p><strong>定理</strong>（对数正态分布）设随机变量$X$服从正态分布$N(\mu,\sigma^2)$，则$Y=e^X$的概率密度函数为</p>
 <script type="math/tex; mode=display">
@@ -731,7 +731,7 @@ p_Y(y)=
 \nu_k=E[(X-E(X))^k]</script><p>为$X$的$k$阶中心矩。</p>
 <p>对于$k$阶矩的理解，引用百度网友在<a target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/2140165628354387908.html?qbl=relate_question_7">这里</a>的回答:</p>
 <blockquote>
-<p>用“数学”语言通俗描述，$k$阶原点矩是随机变量$X$“偏离”原点$(0,0)$的“距离”的$k$次方的期望值。一般地，对于正整数$k$，如果$E|(X-0)^k|=E|X^k|&lt;∞$，故称$E(X^k)$ 为随机变量$X$的$k$阶原点矩。$k$阶中心矩是随机变量$X$“偏离”其中心的“距离”的$k$次方的期望值。一般均以其<strong>平均数</strong>为“中心”。故，对于正整数$k$，如果$E(X)$存在，“偏离”$E(x)$距离的$k$次方的期望值存在、且$E[|X - E(X)|^k]&lt;∞$，则称$E{[X-E(X)]^k}$为随机变量$X$的$k$阶中心矩。如$X$的方差是$X$的二阶中心矩，即$D(X)=E{[X-E(X)]^2}$ 等。</p>
+<p>用“数学”语言通俗描述，$k$阶原点矩是随机变量$X$“偏离”原点$(0,0)$的“距离”的$k$次方的期望值。一般地，对于正整数$k$，如果$E|(X-0)^k|=E|X^k|&lt;∞$，故称$E(X^k)$ 为随机变量$X$的$k$阶原点矩。$k$阶中心矩是随机变量$X$“偏离”其中心的“距离”的$k$次方的期望值。一般均以其<strong>平均数</strong>为“中心”。故，对于正整数$k$，如果$E(X)$存在，“偏离”$E(x)$距离的$k$次方的期望值存在、且$E[|X - E(X)|^k]&lt;∞$，则称$E\{[X-E(X)]^k\}$为随机变量$X$的$k$阶中心矩。如$X$的方差是$X$的二阶中心矩，即$D(X)=E\{[X-E(X)]^2\}$ 等。</p>
 </blockquote>
 <h3 id="2-7-2-变异系数"><a href="#2-7-2-变异系数" class="headerlink" title="2.7.2 变异系数"></a>2.7.2 变异系数</h3><p>设随机变量$X$的二阶矩存在，则称比值</p>
 <script type="math/tex; mode=display">
@@ -739,7 +739,7 @@ C_\nu(X)=\frac{\sqrt{Var(X)}}{E(X)}=\frac{\sigma(X)}{E(X)}</script><p>为$X$的�
 <h3 id="2-7-3-分位数"><a href="#2-7-3-分位数" class="headerlink" title="2.7.3 分位数"></a>2.7.3 分位数</h3><p><strong>定义</strong> 设连续随机变量$X$的分布函数为$F(x)$，密度函数为$p(x)$。对任意$p\in (0,1)$，称满足条件</p>
 <script type="math/tex; mode=display">
 F(x_p)=\int_{-\infty}^{x_{p}}p(x)dx=p</script><p>的$x_p$为此分布的$p$分位数，又称下侧$p$分位数。</p>
-<h3 id="2-7-4-中位数"><a href="#2-7-4-中位数" class="headerlink" title="2.7.4 中位数"></a>2.7.4 中位数</h3><p><strong>定义</strong> 设连续随机变量$X$的分布函数为$F(x)$，密度函数为$p(x)$。称$p=0.5$时的$p$分位数$x<em>{0.5}$为此分布的中位数，$x</em>{0.5}$满足条件</p>
+<h3 id="2-7-4-中位数"><a href="#2-7-4-中位数" class="headerlink" title="2.7.4 中位数"></a>2.7.4 中位数</h3><p><strong>定义</strong> 设连续随机变量$X$的分布函数为$F(x)$，密度函数为$p(x)$。称$p=0.5$时的$p$分位数$x_{0.5}$为此分布的中位数，$x_{0.5}$满足条件</p>
 <script type="math/tex; mode=display">
 F(x_{0.5})=\int_{-\infty}^{x_{0.5}}p(x)dx=0.5</script><h3 id="2-7-5-偏度系数"><a href="#2-7-5-偏度系数" class="headerlink" title="2.7.5 偏度系数"></a>2.7.5 偏度系数</h3><p><strong>定义</strong> 设随机变量 $X$ 的前<strong>三</strong>阶矩存在，则如下比值</p>
 <script type="math/tex; mode=display">
@@ -1150,7 +1150,7 @@ MathJax.Hub.Queue(function() {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>

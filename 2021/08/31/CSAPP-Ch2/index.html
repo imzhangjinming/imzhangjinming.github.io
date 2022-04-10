@@ -321,7 +321,7 @@
 <h3 id="2-1-3-寻址和字节顺序"><a href="#2-1-3-寻址和字节顺序" class="headerlink" title="2.1.3 寻址和字节顺序"></a>2.1.3 寻址和字节顺序</h3><p>对于占用多个字节的程序对象，我们必须弄明白两件事情：此对象的地址是什么？它的各个字节在内存中是怎么排序的？</p>
 <p>对于第一个问题，通常选择此对象整个字节序列中的最小地址作为此对象的地址</p>
 <p>对于第二个问题，通常有两种方法：</p>
-<p>现在假设一个 <em>w</em> 比特整型变量的比特表示是 $[x<em>{w-1},x</em>{w-2},…,x<em>1,x_0]$，其中 $x</em>{w-1}$ 称为<strong>最重要的位</strong>（the most significant bit）。假设 <em>w</em> 是8的倍数，那么这些位可以被分成一系列字节，最重要的字节是  $[x<em>{w-1},x</em>{w-2},…,x<em>{w-8}]$，最低的字节是  $[x</em>{7},x_{6},…,x_1,x_0]$​​ ，其它字节在这两个字节中间。</p>
+<p>现在假设一个 <em>w</em> 比特整型变量的比特表示是 $[x_{w-1},x_{w-2},…,x_1,x_0]$，其中 $x_{w-1}$ 称为<strong>最重要的位</strong>（the most significant bit）。假设 <em>w</em> 是8的倍数，那么这些位可以被分成一系列字节，最重要的字节是  $[x_{w-1},x_{w-2},…,x_{w-8}]$，最低的字节是  $[x_{7},x_{6},…,x_1,x_0]$​​ ，其它字节在这两个字节中间。</p>
 <p>有些机器存储顺序是 从 最重要的字节 到 最不重要字节，这种存储方法称为 <strong>大端</strong>（big endian）</p>
 <p>有些机器存储顺序相反， 称为 <strong>小端</strong>（little endian）</p>
 <p>例如，存储 0x01234567 这个整型，大端的地址排列是这样的：</p>
@@ -491,8 +491,8 @@
 <p>!(x^y)</p>
 <h3 id="2-1-9-C语言中的移位操作"><a href="#2-1-9-C语言中的移位操作" class="headerlink" title="2.1.9 C语言中的移位操作"></a>2.1.9 C语言中的移位操作</h3><p>即 左移操作符 <code>&lt;&lt;</code> 和 右移操作符 <code>&gt;&gt;</code></p>
 <p>其中右移操作符有说法，总的来说，机器支持<strong>两种</strong>形式的右移操作：</p>
-<p><em>逻辑右移</em>：右移后产生的空位用 0 填充                            $[0,…,0,x<em>{w−1},x</em>{w−2},…x_k]$</p>
-<p><em>算术右移</em>：右移后产生的空位用 最高位的值 填充            $[x<em>{w−1},…,x</em>{w−1},x<em>{w−1},x</em>{w−2},…x_k]$</p>
+<p><em>逻辑右移</em>：右移后产生的空位用 0 填充                            $[0,…,0,x_{w−1},x_{w−2},…x_k]$</p>
+<p><em>算术右移</em>：右移后产生的空位用 最高位的值 填充            $[x_{w−1},…,x_{w−1},x_{w−1},x_{w−2},…x_k]$</p>
 <p>C语言标准并没有明确规定使用哪种形式的右移。一般情况下，对于有符号数据使用 <strong>算术</strong> 右移；无符号数据 使用 <strong>逻辑</strong> 右移</p>
 <h3 id="练习题-2-16"><a href="#练习题-2-16" class="headerlink" title="练习题 2.16"></a>练习题 2.16</h3><p>Fill in the table below showing the effects of the different shift operations on single- byte quantities. The best way to think about shift operations is to work with binary representations. Convert the initial values to binary, perform the shifts, and then convert back to hexadecimal. Each of the answers should be 8 binary digits or 2 hexadecimal digits.</p>
 <div class="table-container">
@@ -577,7 +577,7 @@
 <img src="/2021/08/31/CSAPP-Ch2/Snipaste_2021-08-28_21-35-16.png" class="">
 <h3 id="2-2-1-整数数据类型"><a href="#2-2-1-整数数据类型" class="headerlink" title="2.2.1 整数数据类型"></a>2.2.1 整数数据类型</h3><img src="/2021/08/31/CSAPP-Ch2/Snipaste_2021-08-28_21-39-29.png" class="">
 <img src="/2021/08/31/CSAPP-Ch2/Snipaste_2021-08-28_21-39-51.png" class="">
-<h3 id="2-2-2-无符号类型的编码"><a href="#2-2-2-无符号类型的编码" class="headerlink" title="2.2.2 无符号类型的编码"></a>2.2.2 无符号类型的编码</h3><p>现在考虑 一个 $w$ 位的整型数据。我们或者把它表示为位向量  $\vec{x}$ ，或者把它表示为 各个位的集合     $[x<em>{w−1},x</em>{w−2},…,x_0]$ 。现在可以定义函数 $B2U_w$​​ ​（for “binary to unsigned,” length w）</p>
+<h3 id="2-2-2-无符号类型的编码"><a href="#2-2-2-无符号类型的编码" class="headerlink" title="2.2.2 无符号类型的编码"></a>2.2.2 无符号类型的编码</h3><p>现在考虑 一个 $w$ 位的整型数据。我们或者把它表示为位向量  $\vec{x}$ ，或者把它表示为 各个位的集合     $[x_{w−1},x_{w−2},…,x_0]$ 。现在可以定义函数 $B2U_w$​​ ​（for “binary to unsigned,” length w）</p>
 <script type="math/tex; mode=display">
 B2U_w(\vec{x})\doteq\sum_{i=0}^{w-1}x_i2^i</script><h3 id="2-2-3-2的补码-Two’s-Complement-Encodings"><a href="#2-2-3-2的补码-Two’s-Complement-Encodings" class="headerlink" title="2.2.3  2的补码 Two’s-Complement Encodings"></a>2.2.3  2的补码 Two’s-Complement Encodings</h3><p>2的补码中，最重要的位具有 <strong>负</strong> 权重</p>
 <p>现在可以定义 $B2T_w$​ （for “binary to two’s complement” length w）</p>
@@ -918,8 +918,8 @@ x+y+2^w &, &x+y<-2^{w-1} &Negative \ overflow
 \end{cases}</script><img src="/2021/08/31/CSAPP-Ch2/Snipaste_2021-08-29_17-44-30.png" class="">
 <p>如何检测2的补码 overflow ？</p>
 <p>对于在 $[TMin_w,TMax_w]$​ 内的两个整型 $x，y$ ，令 $s\doteq x+_w^ty$ </p>
-<p>当且仅当 $x&gt;0,y&gt;0, \ but \  s\le 0$  时，发生了正溢出</p>
-<p>当且仅当 $x&lt;0,y&lt;0, \ but \  s\ge 0$​  时，发生了负溢出</p>
+<p>当且仅当 $x&gt;0,y&gt;0,  but   s\le 0$  时，发生了正溢出</p>
+<p>当且仅当 $x&lt;0,y&lt;0,  but   s\ge 0$​  时，发生了负溢出</p>
 <h3 id="练习题-2-29"><a href="#练习题-2-29" class="headerlink" title="练习题 2.29"></a>练习题 2.29</h3><div class="table-container">
 <table>
 <thead>
@@ -1014,7 +1014,7 @@ x+y+2^w &, &x+y<-2^{w-1} &Negative \ overflow
 <h3 id="练习题-2-32"><a href="#练习题-2-32" class="headerlink" title="练习题 2.32"></a>练习题 2.32</h3><p>You are assigned the task of writing code for a function <code>tsub_ok</code>, with arguments <code>x</code>  and <code>y</code>, that will return 1 if computing <code>x-y</code> does not cause overflow. Having just written the code for Problem 2.30, you write the following:</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Determine whether arguments can be subtracted without overflow */</span></span><br><span class="line"><span class="comment">/* WARNING: This code is buggy. */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">tsub_ok</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> tadd_ok(x, -y);</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
 <p>For what values of <code>x</code> and <code>y</code> will this function give incorrect results? Writing a correct version of this function is left as an exercise (Problem 2.74).</p>
-<p>$y=TMin \ ,x=任一负数$ </p>
+<p>$y=TMin  ,x=任一负数$ </p>
 <p> <code>tadd_ok</code> 判断结果是负溢出</p>
 <p>而 <code>x-y</code> 结果是一个正数，不会溢出</p>
 <h3 id="2-3-3-2的补码的减法"><a href="#2-3-3-2的补码的减法" class="headerlink" title="2.3.3 2的补码的减法"></a>2.3.3 2的补码的减法</h3><script type="math/tex; mode=display">
@@ -1028,8 +1028,8 @@ TMin_w &, &x=TMin_w \\
 <tr>
 <th>x</th>
 <th>x</th>
-<th>$-_4^t \ x$</th>
-<th>$-_4^t \ x$</th>
+<th>$-_4^t  x$</th>
+<th>$-_4^t  x$</th>
 </tr>
 </thead>
 <tbody>
@@ -1262,7 +1262,7 @@ T2B_w(x \ *_w^t \ y)=U2B_w(x^{'} *_w^u \ y^{'})</script><p>并举了以下例子
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = foo();	<span class="comment">/* Arbitrary value */</span></span><br><span class="line"><span class="keyword">int</span> y = bar();	<span class="comment">/* Arbitrary value */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">unsigned</span> ux = x;</span><br><span class="line"><span class="keyword">unsigned</span> uy = y;</span><br></pre></td></tr></table></figure>
 <p>For each of the following C expressions, either (1) argue that it is true (evaluates to 1) for all values of x and y, or (2) give values of x and y for which it is false (evaluates to 0):</p>
 <p><strong>A</strong>. $(x &gt; 0) || (x-1 &lt; 0)$</p>
-<p>$x=TMin<em>{32}=0x80000000=-2147483648&lt;0$​​ 时，$x-1=TMax</em>{32}=0x7fffffff=2147483647&gt;0$​​</p>
+<p>$x=TMin_{32}=0x80000000=-2147483648<0$​​ 时，$x-1=TMax_{32}=0x7fffffff=2147483647>0$​​</p>
 <p><strong>B</strong>. $(x\&amp;7) != 7||(x&lt;&lt;29 &lt; 0)$​​</p>
 <p>总是正确的</p>
 <p><strong>C</strong>. $(x * x) &gt;= 0$​</p>
@@ -1271,7 +1271,7 @@ T2B_w(x \ *_w^t \ y)=U2B_w(x^{'} *_w^u \ y^{'})</script><p>并举了以下例子
 <p><strong>D</strong>. $x &lt; 0 || -x &lt;= 0$</p>
 <p>总是正确的</p>
 <p><strong>E</strong>. $x &gt; 0 || -x &gt;= 0$</p>
-<p>$x=TMin<em>{32}&lt;0$ 时，$-x=TMin</em>{32}&lt;0$</p>
+<p>$x=TMin_{32}&lt;0$ 时，$-x=TMin_{32}&lt;0$</p>
 <p><strong>F</strong>. $x+y == uy+ux$</p>
 <p>总是正确的，因为 $x+y$ 和 $uy+ux$ 的位模式都是一样，而在最后 $==$ 判断的时候  $x+y$ 又会被自动转换为无符号类型，所以判断结果总是 1</p>
 <p><strong>G</strong>. $x<em>\sim y + uy</em>ux == -x$​​</p>
@@ -1356,7 +1356,7 @@ b=\sum_{i=-n}^{m}2^i \times b_i</script><img src="/2021/08/31/CSAPP-Ch2/Snipaste
 <p>这可以用来表示绝对值很小的值</p>
 <p><strong>第三种</strong> 特殊值</p>
 <p>指数部分全部为 1 是用来表示特殊值的（看 2.33 图）</p>
-<p>$+\infty ,\ -\infty ,\ NaN$</p>
+<p>$+\infty , -\infty , NaN$</p>
 <h3 id="2-4-3-举一些数作为例子"><a href="#2-4-3-举一些数作为例子" class="headerlink" title="2.4.3 举一些数作为例子"></a>2.4.3 举一些数作为例子</h3><h3 id="练习题-2-47"><a href="#练习题-2-47" class="headerlink" title="练习题 2.47"></a>练习题 2.47</h3><p>Consider a 5-bit floating-point representation based on the IEEE floating-point format, with one sign bit, two exponent bits ($k = 2$), and two fraction bits ($n = 2$). The exponent bias is $2^{2−1} − 1 = 1$.</p>
 <p>The table that follows enumerates the entire nonnegative range for this 5-bit floating-point representation. Fill in the blank table entries using the following directions:</p>
 <p>$e$ : The value represented by considering the exponent field to be an <strong>unsigned integer</strong></p>
@@ -1562,11 +1562,11 @@ b=\sum_{i=-n}^{m}2^i \times b_i</script><img src="/2021/08/31/CSAPP-Ch2/Snipaste
 </table>
 </div>
 <h3 id="练习题-2-48"><a href="#练习题-2-48" class="headerlink" title="练习题 2.48"></a>练习题 2.48</h3><p>As mentioned in Problem 2.6, the integer 3,510,593 has hexadecimal representation 0x00359141, while the single-precision floating-point number 3,510,593.0 has hexadecimal representation 0x4A564504. Derive this floating-point representation and explain the correlation between the bits of the integer and floating-point representations.</p>
-<p>$0x00359141=0000\ 0000\ 0011\ 0101\ 1001\ 0001\ 0100\ 0001 = 1.1\ 0101\ 1001\ 0001\ 0100\ 0001_2 \times 2^{21}$​</p>
-<p>$f=0.1\ 0101\ 1001\ 0001\ 0100\ 0001$</p>
+<p>$0x00359141=0000 0000 0011 0101 1001 0001 0100 0001 = 1.1 0101 1001 0001 0100 0001_2 \times 2^{21}$​</p>
+<p>$f=0.1 0101 1001 0001 0100 0001$</p>
 <p>$e=21+2^{8-1}-1=2^7+2^4+2^2=10010100$​</p>
 <p>所以 3,510,593.0 的位模式</p>
-<p>$0\ 10010100\ 101011001000101000001 = 0100\ 1010\ 0101\ 0110\ 0100\ 0101\ 0000\ 0100 = 0x4A564504$</p>
+<p>$0 10010100 101011001000101000001 = 0100 1010 0101 0110 0100 0101 0000 0100 = 0x4A564504$</p>
 <h3 id="练习题-2-49"><a href="#练习题-2-49" class="headerlink" title="练习题 2.49"></a>练习题 2.49</h3><p><strong>A</strong>. For a floating-point format with an n-bit fraction, give a formula for the smallest positive integer that cannot be represented exactly (because it would require an $(n + 1)$-bit fraction to be exact). Assume the exponent field size $k$ is large enough that the range of representable exponents does not provide a limitation for this problem.</p>
 <p>$2^{n+1}+1$​</p>
 <p><strong>B</strong>. What is the numeric value of this integer for single-precision format ($n = 23$)?</p>
@@ -2081,7 +2081,7 @@ MathJax.Hub.Queue(function() {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>

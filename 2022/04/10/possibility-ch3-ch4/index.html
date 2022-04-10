@@ -186,11 +186,11 @@
       
         <p>补习基础数理知识之概率论</p>
 <span id="more"></span>
-<h1 id="第三章-多维随机变量及其分布"><a href="#第三章-多维随机变量及其分布" class="headerlink" title="第三章 多维随机变量及其分布"></a>第三章 多维随机变量及其分布</h1><h2 id="3-1-多维随机变量及其联合分布"><a href="#3-1-多维随机变量及其联合分布" class="headerlink" title="3.1 多维随机变量及其联合分布"></a>3.1 多维随机变量及其联合分布</h2><h3 id="3-1-1-多维随机变量"><a href="#3-1-1-多维随机变量" class="headerlink" title="3.1.1 多维随机变量"></a>3.1.1 多维随机变量</h3><p><strong>定义</strong> 如果$X_1(\omega),\ X_2(\omega),\cdots,\ X_n(\omega)$是定义在同一个样本空间$\Omega={\omega}$上的$n$个随机变量，则称</p>
+<h1 id="第三章-多维随机变量及其分布"><a href="#第三章-多维随机变量及其分布" class="headerlink" title="第三章 多维随机变量及其分布"></a>第三章 多维随机变量及其分布</h1><h2 id="3-1-多维随机变量及其联合分布"><a href="#3-1-多维随机变量及其联合分布" class="headerlink" title="3.1 多维随机变量及其联合分布"></a>3.1 多维随机变量及其联合分布</h2><h3 id="3-1-1-多维随机变量"><a href="#3-1-1-多维随机变量" class="headerlink" title="3.1.1 多维随机变量"></a>3.1.1 多维随机变量</h3><p><strong>定义</strong> 如果$X_1(\omega), X_2(\omega),\cdots, X_n(\omega)$是定义在同一个样本空间$\Omega=\{\omega\}$上的$n$个随机变量，则称</p>
 <script type="math/tex; mode=display">
 X(\omega)=(X_1(\omega),\ X_2(\omega),\cdots,\ X_n(\omega))</script><p>为$n$维随机变量。</p>
 <p><strong>这个定义的关键点在于：所有随机变量定义在同一个样本空间上</strong></p>
-<h3 id="3-1-2-联合分布函数"><a href="#3-1-2-联合分布函数" class="headerlink" title="3.1.2 联合分布函数"></a>3.1.2 联合分布函数</h3><p><strong>定义</strong> 对任意$n$个实数$x_1,x_2,\cdots,x_n$，则$n$个事件${X_1\le x_1},{X_2\le x_2},\cdots,{X_n\le x_n}}$同时发生的概率</p>
+<h3 id="3-1-2-联合分布函数"><a href="#3-1-2-联合分布函数" class="headerlink" title="3.1.2 联合分布函数"></a>3.1.2 联合分布函数</h3><p><strong>定义</strong> 对任意$n$个实数$x_1,x_2,\cdots,x_n$，则$n$个事件$\{X_1\le x_1\},\{X_2\le x_2\},\cdots,\{X_n\le x_n\}\}$同时发生的概率</p>
 <script type="math/tex; mode=display">
 F(x_1,x_2,\cdots,x_n)=P(X_1\le x_1,X_2\le x_2,\cdots,X_n\le x_n)</script><p>称为$n$维随机变量$(X_1,X_2,\cdots,X_n)$的联合分布函数。</p>
 <h3 id="3-1-4-联合密度函数"><a href="#3-1-4-联合密度函数" class="headerlink" title="3.1.4 联合密度函数"></a>3.1.4 联合密度函数</h3><p><strong>定义</strong> 如果存在二元非负函数$p(x,y)$，使得二维随机变量$(X,Y)$的分布函数$F(X,Y)$可以表示为</p>
@@ -398,7 +398,7 @@ x^2,& & & 0<x<1,y>1,\\
 \end{cases}</script><h2 id="3-2-边际分布与随机变量的独立性"><a href="#3-2-边际分布与随机变量的独立性" class="headerlink" title="3.2 边际分布与随机变量的独立性"></a>3.2 边际分布与随机变量的独立性</h2><h3 id="3-2-1-边际分布函数"><a href="#3-2-1-边际分布函数" class="headerlink" title="3.2.1 边际分布函数"></a>3.2.1 边际分布函数</h3><p>如果在二维随机变量$(X,Y)$的联合分布函数$F(x,y)$中令$y\to \infty$，由于${Y&lt;\infty}$为必然事件，故可得</p>
 <script type="math/tex; mode=display">
 \lim _{y \rightarrow \infty} F(x, y)=P(X \leqslant x, Y<\infty)=P(X \leqslant x)</script><p>这是由$(X,Y)$的联合分布函数$F(x,y)$求得的$X$的分布函数，被称为$X$的边际分布，记为$F_X(x)=F(x,\infty)$</p>
-<h3 id="3-2-2-边际分布列"><a href="#3-2-2-边际分布列" class="headerlink" title="3.2.2 边际分布列"></a>3.2.2 边际分布列</h3><p>在二维离散随机变量 $(X, Y)$ 的联合分布列 $\left{ P\left(X=x<em>{i}, Y=y</em>{j}\right)\right}$ 中, 对 $j$ 求和所 得的分布列</p>
+<h3 id="3-2-2-边际分布列"><a href="#3-2-2-边际分布列" class="headerlink" title="3.2.2 边际分布列"></a>3.2.2 边际分布列</h3><p>在二维离散随机变量 $(X, Y)$ 的联合分布列 $\left\{ P\left(X=x_{i}, Y=y_{j}\right)\right\}$ 中, 对 $j$ 求和所 得的分布列</p>
 <script type="math/tex; mode=display">
 \sum_{j=1}^{\infty} P\left(X=x_{i}, Y=y_{j}\right)=P\left(X=x_{i}\right), \quad i=1,2, \cdots</script><p>被称为 $X$ 的边际分布列. 类似地, 对 $i$ 求和所得的分布列</p>
 <script type="math/tex; mode=display">
@@ -407,24 +407,24 @@ x^2,& & & 0<x<1,y>1,\\
 \begin{aligned}
 &p_{X}(x)=\int_{-\infty}^{\infty} p(x, y) \mathrm{d} y, \\
 &p_{Y}(y)=\int_{-\infty}^{\infty} p(x, y) \mathrm{d} x .
-\end{aligned}</script><h3 id="3-2-4-随机变量间的独立性"><a href="#3-2-4-随机变量间的独立性" class="headerlink" title="3.2.4 随机变量间的独立性"></a>3.2.4 随机变量间的独立性</h3><p><strong>定义</strong> 设 $n$ 维随机变量 $\left(X<em>{1}, X</em>{2}, \cdots, X<em>{n}\right)$ 的联合分布函数为 $F\left(x</em>{1}, x<em>{2}\right.$, $\left.\cdots, x</em>{n}\right), F<em>{i}\left(x</em>{i}\right)$ 为 $X<em>{i}$ 的边际分布函数. 如果对任意 $n$ 个实数 $x</em>{1}, x<em>{2}, \cdots, x</em>{n}$, 有</p>
+\end{aligned}</script><h3 id="3-2-4-随机变量间的独立性"><a href="#3-2-4-随机变量间的独立性" class="headerlink" title="3.2.4 随机变量间的独立性"></a>3.2.4 随机变量间的独立性</h3><p><strong>定义</strong> 设 $n$ 维随机变量 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 的联合分布函数为 $F\left(x_{1}, x_{2}\right.$, $\left.\cdots, x_{n}\right), F_{i}\left(x_{i}\right)$ 为 $X_{i}$ 的边际分布函数. 如果对任意 $n$ 个实数 $x_{1}, x_{2}, \cdots, x_{n}$, 有</p>
 <script type="math/tex; mode=display">
-F\left(x_{1}, x_{2}, \cdots, x_{n}\right)=\prod_{i=1}^{n} F_{i}\left(x_{i}\right),</script><p>则称 $X<em>{1}, X</em>{2}, \cdots, X<em>{n}$ 相互独立.<br>在离散随机变量场合, 如果对其任意 $n$ 个取值 $x</em>{1}, x<em>{2}, \cdots, x</em>{n}$, 有</p>
+F\left(x_{1}, x_{2}, \cdots, x_{n}\right)=\prod_{i=1}^{n} F_{i}\left(x_{i}\right),</script><p>则称 $X_{1}, X_{2}, \cdots, X_{n}$ 相互独立.<br>在离散随机变量场合, 如果对其任意 $n$ 个取值 $x_{1}, x_{2}, \cdots, x_{n}$, 有</p>
 <script type="math/tex; mode=display">
-P\left(X_{1}=x_{1}, X_{2}=x_{2}, \cdots, X_{n}=x_{n}\right)=\prod_{i=1}^{n} P\left(X_{i}=x_{i}\right),</script><p>则称 $X<em>{1}, X</em>{2}, \cdots, X<em>{n}$ 相互独立.<br>在连续随机变量场合, 如果对任意 $n$ 个实数 $x</em>{1}, x<em>{2}, \cdots, x</em>{n}$, 有</p>
+P\left(X_{1}=x_{1}, X_{2}=x_{2}, \cdots, X_{n}=x_{n}\right)=\prod_{i=1}^{n} P\left(X_{i}=x_{i}\right),</script><p>则称 $X_{1}, X_{2}, \cdots, X_{n}$ 相互独立.<br>在连续随机变量场合, 如果对任意 $n$ 个实数 $x_{1}, x_{2}, \cdots, x_{n}$, 有</p>
 <script type="math/tex; mode=display">
-p\left(x_{1}, x_{2}, \cdots, x_{n}\right)=\prod_{i=1}^{n} p_{i}\left(x_{i}\right),</script><p>则称 $X<em>{1}, X</em>{2}, \cdots, X_{n}$ 相互独立.</p>
+p\left(x_{1}, x_{2}, \cdots, x_{n}\right)=\prod_{i=1}^{n} p_{i}\left(x_{i}\right),</script><p>则称 $X_{1}, X_{2}, \cdots, X_{n}$ 相互独立.</p>
 <h3 id="习题3-2"><a href="#习题3-2" class="headerlink" title="习题3.2"></a>习题3.2</h3><p><strong>2.设二维随机变量$(X,Y)$的联合分布函数为</strong></p>
 <script type="math/tex; mode=display">
 F(x, y)= \begin{cases}1-\mathrm{e}^{-\lambda_{1} x}-\mathrm{e}^{-\lambda_{2} y}+\mathrm{e}^{-\lambda_{1} x-\lambda_{2} y-\lambda_{12} \max |x, y|}, & x>0, y>0, \\ 0, & \text { 其他. }\end{cases}</script><p><strong>试求$X$和$Y$各自的边际分布函数</strong></p>
-<p>题目没有明确指出$\lambda<em>1, \lambda_2, \lambda</em>{12}$的正负性，假定它们都大于零</p>
-<p>$x\le 0$时，$F<em>{X}(x)=0,\ p</em>{X}(x)=0$；</p>
+<p>题目没有明确指出$\lambda_1, \lambda_2, \lambda_{12}$的正负性，假定它们都大于零</p>
+<p>$x\le 0$时，$F_{X}(x)=0, p_{X}(x)=0$；</p>
 <p>$x&gt;0$时</p>
 <script type="math/tex; mode=display">
 F_{X}(x)=1-\mathrm{e}^{-\lambda_{1} x}</script><p>同理可得$Y$都边际分布函数。</p>
 <p><strong>12.设随机变量 $(X, Y)$ 的联合密度函数为</strong></p>
 <script type="math/tex; mode=display">
-p(x, y)= \begin{cases}3 x, & 0<x<1,0<y<x, \\ 0, & \text { 其他. }\end{cases}</script><p><strong>试求:(1) 边际密度函数 $p<em>{x}(x)$ 和 $p</em>{y}(y)$; (2) $X$ 与 $Y$ 是否独立?</strong></p>
+p(x, y)= \begin{cases}3 x, & 0<x<1,0<y<x, \\ 0, & \text { 其他. }\end{cases}</script><p><strong>试求:(1) 边际密度函数 $p_{x}(x)$ 和 $p_{y}(y)$; (2) $X$ 与 $Y$ 是否独立?</strong></p>
 <p>(1)</p>
 <script type="math/tex; mode=display">
 p_{X}(x)=\begin{cases}=\displaystyle\int_{0}^{x}3x\mathrm{d}y=3x^2,&  &0<x<1,\\
@@ -443,10 +443,10 @@ P(Y-X\le\frac{a}{3})=\int_{a/6}^{a/2}\int_{a/2}^{x+a/3}\frac{4}{a^2}\mathrm{d}y\
 <p><strong>泊松分布的可加性</strong> 设随机变量$X\sim P(\lambda_1),Y\sim P(\lambda_2)$，且$X$与$Y$相互独立，则$Z=X+Y\sim P(\lambda_1+\lambda_2)$</p>
 <p><strong>二项分布的可加性</strong> 设随机变量$X\sim b(n,p), Y\sim b(m,p)$，且$X$与$Y$独立，则$Z=X+Y\sim b(n+m,p)$</p>
 <p><strong>正态分布的可加性</strong> 设随机变量$X\sim N(\mu_1,\sigma_1^2), Y\sim N(\mu_2,\sigma_2^2)$，且$X$与$Y$独立，则$Z=X+Y\sim N(\mu_1+\mu_2,\sigma_1^2+\sigma_2^2)$</p>
-<p><strong>伽玛分布的可加性</strong> 设随机变量 $X \sim G a\left(\alpha<em>{1}, \lambda\right), Y \sim G a\left(\alpha</em>{2}, \lambda\right)$, 且 $X$ 与 $Y$ 独立, 则 $Z=X+Y \sim G a\left(\alpha<em>{1}+\alpha</em>{2}, \lambda\right)$.</p>
-<p><strong>令人感到迷惑的卡方分布的来源：</strong> 设 $X<em>{1}, X</em>{2}, \cdots, X<em>{n}$ 是 $n$ 个相互独立同分布的<strong>标准</strong>正态变量,证明 其平方和 $Y=X</em>{1}^{2}+X<em>{2}^{2}+\cdots+X</em>{n}^{2}$ 服从自由度为 $n$ 的 $\chi^{2}$ 分布.</p>
+<p><strong>伽玛分布的可加性</strong> 设随机变量 $X \sim G a\left(\alpha_{1}, \lambda\right), Y \sim G a\left(\alpha_{2}, \lambda\right)$, 且 $X$ 与 $Y$ 独立, 则 $Z=X+Y \sim G a\left(\alpha_{1}+\alpha_{2}, \lambda\right)$.</p>
+<p><strong>令人感到迷惑的卡方分布的来源：</strong> 设 $X_{1}, X_{2}, \cdots, X_{n}$ 是 $n$ 个相互独立同分布的<strong>标准</strong>正态变量,证明 其平方和 $Y=X_{1}^{2}+X_{2}^{2}+\cdots+X_{n}^{2}$ 服从自由度为 $n$ 的 $\chi^{2}$ 分布.</p>
 <p>卡方分布和伽马分布，正态分布的关系都很紧密，是需要认真对待的一种分布。它的参数$n$表示独立的标准正态分布的个数，也可以叫它<strong>自由度</strong></p>
-<h2 id="3-4-多维随机变量的特征数"><a href="#3-4-多维随机变量的特征数" class="headerlink" title="3.4 多维随机变量的特征数"></a>3.4 多维随机变量的特征数</h2><h3 id="3-4-1-多维随机变量函数的数学期望"><a href="#3-4-1-多维随机变量函数的数学期望" class="headerlink" title="3.4.1 多维随机变量函数的数学期望"></a>3.4.1 多维随机变量函数的数学期望</h3><p>定理 3.4.1 若二维随机变量 $(X, Y)$ 的分布用联合分布列 $P\left(X=x<em>{i}, Y=y</em>{j}\right)$ 或用联合密度函数 $p(x, y)$ 表示, 则 $Z=g(X, Y)$ 的数学期望为</p>
+<h2 id="3-4-多维随机变量的特征数"><a href="#3-4-多维随机变量的特征数" class="headerlink" title="3.4 多维随机变量的特征数"></a>3.4 多维随机变量的特征数</h2><h3 id="3-4-1-多维随机变量函数的数学期望"><a href="#3-4-1-多维随机变量函数的数学期望" class="headerlink" title="3.4.1 多维随机变量函数的数学期望"></a>3.4.1 多维随机变量函数的数学期望</h3><p>定理 3.4.1 若二维随机变量 $(X, Y)$ 的分布用联合分布列 $P\left(X=x_{i}, Y=y_{j}\right)$ 或用联合密度函数 $p(x, y)$ 表示, 则 $Z=g(X, Y)$ 的数学期望为</p>
 <script type="math/tex; mode=display">
 E(Z)=
 \begin{cases}
@@ -489,7 +489,7 @@ Var(X\pm Y)&=E\{[(X\pm Y)-E(X\pm Y)]^2\}\\
 <li>$\operatorname{Cov}(a X, b Y)=a b \operatorname{Cov}(X, Y)$</li>
 <li>$\operatorname{Cov}(X+Y, Z)=\operatorname{Cov}(X, Z)+\operatorname{Cov}(Y, Z)$</li>
 </ul>
-<p><strong>相关系数的定义</strong> 设 $(X, Y)$ 是一个二维随机变量, 且 $\operatorname{Var}(X)=\sigma<em>{X}^{2}&gt;0, \operatorname{Var}(Y)=$ $\sigma</em>{Y}^{2}&gt;0$. 则称</p>
+<p><strong>相关系数的定义</strong> 设 $(X, Y)$ 是一个二维随机变量, 且 $\operatorname{Var}(X)=\sigma_{X}^{2}&gt;0, \operatorname{Var}(Y)=$ $\sigma_{Y}^{2}&gt;0$. 则称</p>
 <script type="math/tex; mode=display">
 \operatorname{Corr}(X, Y)=\frac{\operatorname{Cov}(X, Y)}{\sqrt{\operatorname{Var}(X)} \sqrt{\operatorname{Var}(Y)}}=\frac{\operatorname{Cov}(X, Y)}{\sigma_{X} \sigma_{Y}}</script><p>为 $X$ 与 $Y$ 的 (线性) 相关系数.</p>
 <p>$-1\le\operatorname{Corr}(X, Y)\le1$</p>
@@ -502,7 +502,7 @@ Var(X\pm Y)&=E\{[(X\pm Y)-E(X\pm Y)]^2\}\\
 <li>若 $\operatorname{Corr}(X, Y)=1$, 则称 $X$ 与 $Y$ 完全<strong>正相关</strong>; 若 $\operatorname{Corr}(X, Y)=-1$, 则称 $X$ 与 $Y$ 完全负相关.</li>
 </ul>
 </blockquote>
-<h3 id="3-4-5-随机向量的数学期望向量与协方差矩阵"><a href="#3-4-5-随机向量的数学期望向量与协方差矩阵" class="headerlink" title="3.4.5 随机向量的数学期望向量与协方差矩阵"></a>3.4.5 随机向量的数学期望向量与协方差矩阵</h3><p><strong>定义</strong> 记 $n$ 维随机向量为 $X=\left(X<em>{1}, X</em>{2}, \cdots, X_{n}\right)^{\prime}$, 若其每个分量的数学期望都存在, 则称</p>
+<h3 id="3-4-5-随机向量的数学期望向量与协方差矩阵"><a href="#3-4-5-随机向量的数学期望向量与协方差矩阵" class="headerlink" title="3.4.5 随机向量的数学期望向量与协方差矩阵"></a>3.4.5 随机向量的数学期望向量与协方差矩阵</h3><p><strong>定义</strong> 记 $n$ 维随机向量为 $X=\left(X_{1}, X_{2}, \cdots, X_{n}\right)^{\prime}$, 若其每个分量的数学期望都存在, 则称</p>
 <script type="math/tex; mode=display">
 E(X)=\left(E\left(X_{1}\right), E\left(X_{2}\right), \cdots, E\left(X_{n}\right)\right)^{\prime}</script><p>为 $n$ 维随机向量 $X$ 的数学期望向量, 简称为 $X$ 的数学期望, 而称</p>
 <script type="math/tex; mode=display">
@@ -526,8 +526,8 @@ E(X)=2\times\sum_{i=0}^{n}i\times\frac{n+1-i}{n(n+1)}=\frac{n+2}{3}</script><p>�
 p(x, y)= \begin{cases}x\left(1+3 y^{2}\right) / 4, & 0<x<2,0<y<1, \\ 0, & \text { 其他. }\end{cases}</script><p><strong>试求 $E(Y / X)$.</strong></p>
 <script type="math/tex; mode=display">
 E(Y/X)=\int_{0}^{1}\int_{0}^{2}\frac{y}{x}\frac{x(1+3y^2)}{4}\mathrm{d}x\mathrm{d}y=\frac{5}{8}</script><p><strong>23. 将一枚硬币重复抛 $n$ 次, 以 $X$ 和 $Y$ 分别表示正面向上和反面向上的次数, 试求 $X$ 和 $Y$ 的协方差和相关系数.</strong></p>
-<p>$X\sim b(n,0.5),\ Y\sim b(n,0.5)$，且$X+Y=n$</p>
-<p>$E(X)=\displaystyle\frac{n}{2},\ E(Y)=\displaystyle\frac{n}{2}$</p>
+<p>$X\sim b(n,0.5), Y\sim b(n,0.5)$，且$X+Y=n$</p>
+<p>$E(X)=\displaystyle\frac{n}{2}, E(Y)=\displaystyle\frac{n}{2}$</p>
 <script type="math/tex; mode=display">
 \begin{align}
 E(XY)&=\sum_{y=0}^{n} \sum_{x=0}^{n} xy\binom{n}{x}0.5^x0.5^{n-x}\binom{n}{y}0.5^y0.5^{n-y}\\
@@ -540,9 +540,9 @@ E(XY)&=\sum_{y=0}^{n} \sum_{x=0}^{n} xy\binom{n}{x}0.5^x0.5^{n-x}\binom{n}{y}0.5
 <p>这表示$X$与$Y$完全负相关，反映了$X+Y=n$这一关系</p>
 <h2 id="3-5-条件分布与条件期望"><a href="#3-5-条件分布与条件期望" class="headerlink" title="3.5 条件分布与条件期望"></a>3.5 条件分布与条件期望</h2><h3 id="3-5-1-条件分布"><a href="#3-5-1-条件分布" class="headerlink" title="3.5.1 条件分布"></a>3.5.1 条件分布</h3><p>在二维随机变量的情况下，指定其中一个随机变量的值，求出另一个变量的分布，就是条件分布。</p>
 <p><strong>一、离散随机变量的条件分布</strong></p>
-<p><strong>定义</strong> 对一切使 $P\left(Y=y<em>{i}\right)=p</em>{. j}=\displaystyle\sum<em>{i=1}^{\infty} p</em>{i j}&gt;0$ 的 $y_{j}$, 称 </p>
+<p><strong>定义</strong> 对一切使 $P\left(Y=y_{i}\right)=p_{. j}=\displaystyle\sum_{i=1}^{\infty} p_{i j}&gt;0$ 的 $y_{j}$, 称 </p>
 <script type="math/tex; mode=display">
-p_{i | j}=P\left(X=x_{i} \mid Y=y_{j}\right)=\frac{P\left(X=x_{i}, Y=y_{j}\right)}{P\left(Y=y_{j}\right)}=\frac{p_{i j}}{p_{. j}}, \quad i=1,2, \cdots</script><p>为给定 $Y=y<em>{j}$ 条件下 $X$ 的条件分布列.<br>同理, 对一切使 $P\left(X=x</em>{i}\right)=p<em>{i}=\sum</em>{j=1}^{\infty} p<em>{i j}&gt;0$ 的 $x</em>{i}$, 称 </p>
+p_{i | j}=P\left(X=x_{i} \mid Y=y_{j}\right)=\frac{P\left(X=x_{i}, Y=y_{j}\right)}{P\left(Y=y_{j}\right)}=\frac{p_{i j}}{p_{. j}}, \quad i=1,2, \cdots</script><p>为给定 $Y=y_{j}$ 条件下 $X$ 的条件分布列.<br>同理, 对一切使 $P\left(X=x_{i}\right)=p_{i}=\sum_{j=1}^{\infty} p_{i j}&gt;0$ 的 $x_{i}$, 称 </p>
 <script type="math/tex; mode=display">
 p_{j | i}=P\left(Y=y_{j} \mid X=x_{i}\right)=\frac{P\left(X=x_{i}, Y=y_{j}\right)}{P\left(X=x_{i}\right)}=\frac{p_{i j}}{p_{i} \cdot}, \quad j=1,2, \cdots</script><p>为给定 $X=x_{i}$ 条件下 $Y$ 的条件分布列.</p>
 <p><strong>二、连续随机变量的条件分布</strong></p>
@@ -575,30 +575,30 @@ E(X)=E(E(X|Y))</script><p>利用这个结论，我们可以把很大的样本空
 <script type="math/tex; mode=display">
 E(X)=\sum_{j} E\left(X \mid Y=y_{j}\right) P\left(Y=y_{j}\right) .</script><p>(2) 如果 $Y$ 是一个连续随机变量, 则 </p>
 <script type="math/tex; mode=display">
-E(X)=\int_{-\infty}^{\infty} E(X \mid Y=y) p_{y}(y) \mathrm{d} y .</script><p><strong>随机个随机变量和的数学期望</strong> 设 $X<em>{1}, X</em>{2}, \cdots$ 为一列独立同分布的随机变量，随机变量 $N$ 只取正整数值，且 $N$ 与 $\left{X_{n} \right}$ 独立，则</p>
+E(X)=\int_{-\infty}^{\infty} E(X \mid Y=y) p_{y}(y) \mathrm{d} y .</script><p><strong>随机个随机变量和的数学期望</strong> 设 $X_{1}, X_{2}, \cdots$ 为一列独立同分布的随机变量，随机变量 $N$ 只取正整数值，且 $N$ 与 $\left\{X_{n} \right\}$ 独立，则</p>
 <script type="math/tex; mode=display">
 E\left(\sum_{i=1}^{N} X_{i}\right)=E\left(X_{1}\right) E(N) .</script><p>此结论可以解决的问题举例：</p>
-<p>(1)设一天内到达某商场的顾客数 $N$ 是仅取非负整数值的随机变量, 且 $E(N)=35000$. 又设进入此商场的第 $i$ 个顾客的购物金额为 $X<em>{i}$, 可以认为诸 $X</em>{i}$ 是独立同分布的随机变量, 且 $E\left(X<em>{i}\right)=82\left(\right.$ 元). 假设 $N$ 与 $X</em>{i}$ 相互独立是合理的, 则此商场一天的平均营业额为</p>
+<p>(1)设一天内到达某商场的顾客数 $N$ 是仅取非负整数值的随机变量, 且 $E(N)=35000$. 又设进入此商场的第 $i$ 个顾客的购物金额为 $X_{i}$, 可以认为诸 $X_{i}$ 是独立同分布的随机变量, 且 $E\left(X_{i}\right)=82\left(\right.$ 元). 假设 $N$ 与 $X_{i}$ 相互独立是合理的, 则此商场一天的平均营业额为</p>
 <script type="math/tex; mode=display">
-E\left(\sum_{i=0}^{N} X_{i}\right)=E\left(X_{1}\right) E(N)=82 \times 35000=287 \text { (万元) , }</script><p>其中 $X<em>{0}=0$.<br>(2) 一只昆虫一次产卵数 $N$ 服从参数为 $\lambda$ 的泊松分布，每个卵能成活的概率是 $p$, 可设 $X</em>{i}$ 服从 0-1 分布, 而 $\left{X_{i}=1\right}$ 表示第 $i$ 个卵成活, 则一只昆虫一次产卵后的平均成活卵数为</p>
+E\left(\sum_{i=0}^{N} X_{i}\right)=E\left(X_{1}\right) E(N)=82 \times 35000=287 \text { (万元) , }</script><p>其中 $X_{0}=0$.<br>(2) 一只昆虫一次产卵数 $N$ 服从参数为 $\lambda$ 的泊松分布，每个卵能成活的概率是 $p$, 可设 $X_{i}$ 服从 0-1 分布, 而 $\left\{X_{i}=1\right\}$ 表示第 $i$ 个卵成活, 则一只昆虫一次产卵后的平均成活卵数为</p>
 <script type="math/tex; mode=display">
 E\left(\sum_{i=1}^{N} X_{i}\right)=E\left(X_{1}\right) E(N)=\lambda p .</script><h1 id="第四章-大数定律与中心极限定理"><a href="#第四章-大数定律与中心极限定理" class="headerlink" title="第四章 大数定律与中心极限定理"></a>第四章 大数定律与中心极限定理</h1><h2 id="4-1-随机变量序列的两种收敛性"><a href="#4-1-随机变量序列的两种收敛性" class="headerlink" title="4.1 随机变量序列的两种收敛性"></a>4.1 随机变量序列的两种收敛性</h2><p>依概率收敛和依分布收敛</p>
-<h3 id="4-1-1-依概率收敛"><a href="#4-1-1-依概率收敛" class="headerlink" title="4.1.1 依概率收敛"></a>4.1.1 依概率收敛</h3><p><strong>定义</strong> 设 $\left{X_{n}\right}$ 为一随机变量序列, $X$ 为一随机变量, 如果对任意的 $\varepsilon&gt;0$, 有</p>
+<h3 id="4-1-1-依概率收敛"><a href="#4-1-1-依概率收敛" class="headerlink" title="4.1.1 依概率收敛"></a>4.1.1 依概率收敛</h3><p><strong>定义</strong> 设 $\left\{X_{n}\right\}$ 为一随机变量序列, $X$ 为一随机变量, 如果对任意的 $\varepsilon&gt;0$, 有</p>
 <script type="math/tex; mode=display">
-P\left(\left|X_{n}-X\right| \geqslant \varepsilon\right) \rightarrow 0(n \rightarrow \infty),</script><p>则称序列 $\left{X<em>{n}\right}$ 依概率收敛于 $X$, 记作 $X</em>{n} \stackrel{P}{\longrightarrow} X$.</p>
-<p><strong>定理（依概率收敛的运算性质）</strong>  设 $\left{X<em>{n}\right},\left{Y</em>{n} }\right.$ 是两个随机变量序列, $a, b$ 是两个常数. 如果</p>
+P\left(\left|X_{n}-X\right| \geqslant \varepsilon\right) \rightarrow 0(n \rightarrow \infty),</script><p>则称序列 $\left\{X_{n}\right\}$ 依概率收敛于 $X$, 记作 $X_{n} \stackrel{P}{\longrightarrow} X$.</p>
+<p><strong>定理（依概率收敛的运算性质）</strong>  设 $\left\{X_{n}\right\},\left\{Y_{n} \}\right.$ 是两个随机变量序列, $a, b$ 是两个常数. 如果</p>
 <script type="math/tex; mode=display">
-X_{n} \stackrel{P}{\longrightarrow} a, \quad Y_{n} \stackrel{P}{\longrightarrow} b,</script><p>则有 (1) $X<em>{n} \pm Y</em>{n} \stackrel{P}{\longrightarrow} a \pm b$;<br>(2) $X<em>{n} \times Y</em>{n} \stackrel{P}{\longrightarrow} a \times b$;<br>(3) $X<em>{n} \div Y</em>{n} \stackrel{P}{\longrightarrow} a \div b(b \neq 0)$.</p>
+X_{n} \stackrel{P}{\longrightarrow} a, \quad Y_{n} \stackrel{P}{\longrightarrow} b,</script><p>则有 (1) $X_{n} \pm Y_{n} \stackrel{P}{\longrightarrow} a \pm b$;<br>(2) $X_{n} \times Y_{n} \stackrel{P}{\longrightarrow} a \times b$;<br>(3) $X_{n} \div Y_{n} \stackrel{P}{\longrightarrow} a \div b(b \neq 0)$.</p>
 <h3 id="4-1-2-按分布收敛、弱收敛"><a href="#4-1-2-按分布收敛、弱收敛" class="headerlink" title="4.1.2 按分布收敛、弱收敛"></a>4.1.2 按分布收敛、弱收敛</h3><p>在引出按分布收敛的弱收敛定义之前，书里先讨论了要求分布函数<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/逐点收敛/22781982">逐点收敛</a>于某一函数为什么太严格了（会破坏分布函数的右连续性）</p>
-<p><strong>定义</strong> 设随机变量 $X, X<em>{1}, X</em>{2}, \cdots$ 的分布函数分别为 $F(x), F<em>{1}(x)$, $F</em>{2}(x), \cdots$. 若对 $F(x)$ 的任一<strong>连续点 </strong>$x$, 都有</p>
+<p><strong>定义</strong> 设随机变量 $X, X_{1}, X_{2}, \cdots$ 的分布函数分别为 $F(x), F_{1}(x)$, $F_{2}(x), \cdots$. 若对 $F(x)$ 的任一<strong>连续点 </strong>$x$, 都有</p>
 <script type="math/tex; mode=display">
-\lim_{n\to \infty}F_n(x)=F(x)</script><p>则称 $\left{F_{n}(x)\right}$ <strong>弱收敛</strong>于 $F(x)$, 记作</p>
+\lim_{n\to \infty}F_n(x)=F(x)</script><p>则称 $\left\{F_{n}(x)\right\}$ <strong>弱收敛</strong>于 $F(x)$, 记作</p>
 <script type="math/tex; mode=display">
-F_{n}(x) \stackrel{W}{\longrightarrow} F(x)</script><p>也称 $\left{X_{n}\right}$ 按分布收敛于 $X$, 记作</p>
+F_{n}(x) \stackrel{W}{\longrightarrow} F(x)</script><p>也称 $\left\{X_{n}\right\}$ 按分布收敛于 $X$, 记作</p>
 <script type="math/tex; mode=display">
-X_{n} \stackrel{L}{\longrightarrow} X .</script><p><strong>定理</strong> $X<em>{n} \stackrel{P}{\longrightarrow} X \Longrightarrow X</em>{n} \stackrel{L}{\longrightarrow} X$.</p>
+X_{n} \stackrel{L}{\longrightarrow} X .</script><p><strong>定理</strong> $X_{n} \stackrel{P}{\longrightarrow} X \Longrightarrow X_{n} \stackrel{L}{\longrightarrow} X$.</p>
 <p>概率收敛能推出分布收敛</p>
-<p><strong>定理</strong> 若 $c$ 为常数, 则 $X<em>{n} \stackrel{P}{\longrightarrow} c$ 的<strong>充要</strong>条件是: $X</em>{n} \stackrel{L}{\longrightarrow} c$.</p>
+<p><strong>定理</strong> 若 $c$ 为常数, 则 $X_{n} \stackrel{P}{\longrightarrow} c$ 的<strong>充要</strong>条件是: $X_{n} \stackrel{L}{\longrightarrow} c$.</p>
 <h2 id="4-2-特征函数"><a href="#4-2-特征函数" class="headerlink" title="4.2 特征函数"></a>4.2 特征函数</h2><h3 id="4-2-1-定义"><a href="#4-2-1-定义" class="headerlink" title="4.2.1 定义"></a>4.2.1 定义</h3><p>定义 4.2.1 设 $X$ 是一个随机变量, 称</p>
 <script type="math/tex; mode=display">
 \varphi(t)=E\left(\mathrm{e}^{i t x}\right)=
@@ -644,11 +644,11 @@ X_{n} \stackrel{L}{\longrightarrow} X .</script><p><strong>定理</strong> $X<em
 </tr>
 <tr>
 <td style="text-align:left">二项分布$b(n,p)$</td>
-<td style="text-align:left">$\varphi(t)=(p\mathrm{e}^{it}+q)^n,\ q=1-p$</td>
+<td style="text-align:left">$\varphi(t)=(p\mathrm{e}^{it}+q)^n, q=1-p$</td>
 </tr>
 <tr>
 <td style="text-align:left">正态分布$N(\mu,\sigma^2)$</td>
-<td style="text-align:left">$\varphi(t)=\mathrm{exp}{i\mu t-\displaystyle\frac{\sigma^2t^2}{t}}$</td>
+<td style="text-align:left">$\varphi(t)=\mathrm{exp}\{i\mu t-\displaystyle\frac{\sigma^2t^2}{t}\}$</td>
 </tr>
 <tr>
 <td style="text-align:left">伽马分布$Ga(n,\lambda)$</td>
@@ -675,11 +675,11 @@ X_{n} \stackrel{L}{\longrightarrow} X .</script><p><strong>定理</strong> $X<em
 <li>若 $E\left(X^{l}\right)$ 存在, 则 $X$ 的特征函数 $\varphi(t)$ 可 $l$ 次求导, 且对 $1 \leqslant k \leqslant l$, 有</li>
 </ul>
 <script type="math/tex; mode=display">
-\varphi^{(k)}(0)=\mathrm{i}^{k} E\left(X^{k}\right) .</script><p>$E(X)=\displaystyle\frac{\varphi^{‘}(0)}{i},\ Var(X)=E(X^2)-(E(X)^2)=-\varphi^{‘’}(0)+(\varphi^{‘}(0))^2$</p>
+\varphi^{(k)}(0)=\mathrm{i}^{k} E\left(X^{k}\right) .</script><p>$E(X)=\displaystyle\frac{\varphi^{‘}(0)}{i}, Var(X)=E(X^2)-(E(X)^2)=-\varphi^{‘’}(0)+(\varphi^{‘}(0))^2$</p>
 <ul>
 <li><p>随机变量$X$的特征函数$\varphi(t)$在$(-\infty,\infty)$上一致连续</p>
 </li>
-<li><p><strong>非负定性</strong> 随机变量 $X$ 的特征函数 $\varphi(t)$ 是非负定的, 即对任意正整数 $n$ 及 $n$ 个实数 $t<em>{1}, t</em>{2}, \cdots, t<em>{n}$ 和 $n$ 个复数 $z</em>{1}, z<em>{2}, \cdots, z</em>{n}$, 有</p>
+<li><p><strong>非负定性</strong> 随机变量 $X$ 的特征函数 $\varphi(t)$ 是非负定的, 即对任意正整数 $n$ 及 $n$ 个实数 $t_{1}, t_{2}, \cdots, t_{n}$ 和 $n$ 个复数 $z_{1}, z_{2}, \cdots, z_{n}$, 有</p>
 <script type="math/tex; mode=display">
   \sum_{k=1}^{n} \sum_{j=1}^{n} \varphi\left(t_{k}-t_{j}\right) z_{k} \bar{z}_{j} \geqslant 0 .</script></li>
 </ul>
@@ -687,30 +687,30 @@ X_{n} \stackrel{L}{\longrightarrow} X .</script><p><strong>定理</strong> $X<em
 \varphi(t)=\int_{-\infty}^{\infty} e^{i t x} p(x) \mathrm{d} x,\\
 p(x)=\frac{1}{2 \pi} \int_{-\infty}^{\infty} e^{-i t x} \varphi(t) \mathrm{d} t .</script><p>密度函数$\stackrel{傅立叶变换}{\longrightarrow}$特征函数</p>
 <p>特征函数$\stackrel{傅立叶逆变换}{\longrightarrow}$密度函数</p>
-<p><strong>定理</strong> 分布函数序列 $\left{F<em>{n}(x)\right}$ 弱收敛于分布函数 $F(x)$ 的充要条件是 $\left{F</em>{n}(x) }\right.$ 的特征函数序列 $\left.{ \varphi_{n}(t)\right}$ 收敛于 $F(x)$ 的特征函数 $\varphi(t)$.</p>
+<p><strong>定理</strong> 分布函数序列 $\left\{F_{n}(x)\right\}$ 弱收敛于分布函数 $F(x)$ 的充要条件是 $\left\{F_{n}(x) \}\right.$ 的特征函数序列 $\left.\{ \varphi_{n}(t)\right\}$ 收敛于 $F(x)$ 的特征函数 $\varphi(t)$.</p>
 <h2 id="4-3-大数定律"><a href="#4-3-大数定律" class="headerlink" title="4.3 大数定律"></a>4.3 大数定律</h2><h3 id="4-3-1-伯努利大数定律"><a href="#4-3-1-伯努利大数定律" class="headerlink" title="4.3.1 伯努利大数定律"></a>4.3.1 伯努利大数定律</h3><p><strong>定理 (伯努利大数定律)</strong> 设 $s_{n}$ 为 $n$ 重伯努利试验中事件 $A$ 发生的次 数, $p$ 为每次试验中 $A$ 出现的概率, 则对任意的 $\varepsilon&gt;0$, 有</p>
 <script type="math/tex; mode=display">
-\lim _{n \rightarrow \infty} P\left(\left|\frac{s_{n}}{n}-p\right|<\varepsilon\right)=1 \text {. }</script><h3 id="4-3-2-常用的几个大数定律"><a href="#4-3-2-常用的几个大数定律" class="headerlink" title="4.3.2 常用的几个大数定律"></a>4.3.2 常用的几个大数定律</h3><p><strong>定理 (切比雪夫大数定律 )</strong> 设 $\left{X<em>{n} }\right.$ 为一列<strong>两两不相关</strong>的随机变量序列, 若每个 $X</em>{i}$ 的方差存在, 且有共同的上界, 即 $\operatorname{Var}\left(X<em>{i}\right) \leqslant c, i=1,2, \cdots$, 则 $\left|X</em>{n}\right|$ 服从大数定律, 即对任意的 $\varepsilon&gt;0,$ 下式成立.</p>
+\lim _{n \rightarrow \infty} P\left(\left|\frac{s_{n}}{n}-p\right|<\varepsilon\right)=1 \text {. }</script><h3 id="4-3-2-常用的几个大数定律"><a href="#4-3-2-常用的几个大数定律" class="headerlink" title="4.3.2 常用的几个大数定律"></a>4.3.2 常用的几个大数定律</h3><p><strong>定理 (切比雪夫大数定律 )</strong> 设 $\left\{X_{n} \}\right.$ 为一列<strong>两两不相关</strong>的随机变量序列, 若每个 $X_{i}$ 的方差存在, 且有共同的上界, 即 $\operatorname{Var}\left(X_{i}\right) \leqslant c, i=1,2, \cdots$, 则 $\left|X_{n}\right|$ 服从大数定律, 即对任意的 $\varepsilon&gt;0,$ 下式成立.</p>
 <script type="math/tex; mode=display">
 \lim _{n \rightarrow\infty} P\left(\left|\frac{1}{n} \sum_{i=1}^{n} X_{i}-\frac{1}{n} \sum_{i=1}^{n} E\left(X_{i}\right)\right|<\varepsilon\right)=1 .</script><p>切比雪夫大数定律只要求变量<strong>不相关</strong>和方差有同上界，对分布没有要求。</p>
-<p><strong>定理（马尔可夫大数定律）</strong> 对随机变量序列${X<em>n}$，如果$\displaystyle\frac{1}{n^2}\operatorname{Var}(\sum</em>{i=1}^{n}X_i)\rightarrow 0$（马尔可夫条件），则${X_n}$​服从大数定律，即对任意的 $\varepsilon&gt;0,$ 下式成立.</p>
+<p><strong>定理（马尔可夫大数定律）</strong> 对随机变量序列$\{X_n\}$，如果$\displaystyle\frac{1}{n^2}\operatorname{Var}(\sum_{i=1}^{n}X_i)\rightarrow 0$（马尔可夫条件），则$\{X_n\}$​服从大数定律，即对任意的 $\varepsilon&gt;0,$ 下式成立.</p>
 <script type="math/tex; mode=display">
-\lim _{n \rightarrow\infty} P\left(\left|\frac{1}{n} \sum_{i=1}^{n} X_{i}-\frac{1}{n} \sum_{i=1}^{n} E\left(X_{i}\right)\right|<\varepsilon\right)=1 .</script><p><strong>定理 (辛钦大数定律)</strong> 设 $\left{X<em>{n}\right}$ 为一<strong>独立同分布</strong>的随机变量序列, 若 $X</em>{i}$ 的数学期望存在, 则 $\left{X_{n}\right}$ 服从大数定律, 即对任意的 $\varepsilon&gt;0,$​ 下式成立.</p>
+\lim _{n \rightarrow\infty} P\left(\left|\frac{1}{n} \sum_{i=1}^{n} X_{i}-\frac{1}{n} \sum_{i=1}^{n} E\left(X_{i}\right)\right|<\varepsilon\right)=1 .</script><p><strong>定理 (辛钦大数定律)</strong> 设 $\left\{X_{n}\right\}$ 为一<strong>独立同分布</strong>的随机变量序列, 若 $X_{i}$ 的数学期望存在, 则 $\left\{X_{n}\right\}$ 服从大数定律, 即对任意的 $\varepsilon&gt;0,$​ 下式成立.</p>
 <script type="math/tex; mode=display">
 \lim _{n \rightarrow\infty} P\left(\left|\frac{1}{n} \sum_{i=1}^{n} X_{i}-\frac{1}{n} \sum_{i=1}^{n} E\left(X_{i}\right)\right|<\varepsilon\right)=1 .</script><h2 id="4-4-中心极限定理"><a href="#4-4-中心极限定理" class="headerlink" title="4.4 中心极限定理"></a>4.4 中心极限定理</h2><p>大数定律讨论的是<strong>随机变量的算术平均</strong>在什么条件下依概率收敛于其<strong>均值的算术平均</strong>。</p>
 <p>中心极限定理讨论的是<strong>随机变量和</strong>的分布在什么条件下收敛于<strong>正态分布</strong>。</p>
-<h3 id="4-4-2-独立同分布下的中心极限定理"><a href="#4-4-2-独立同分布下的中心极限定理" class="headerlink" title="4.4.2 独立同分布下的中心极限定理"></a>4.4.2 独立同分布下的中心极限定理</h3><p><strong>定理  (林德伯格-莱维 (Lindeberg-Lévy) 中心极限定理)</strong> 设 $\left{X<em>{n}\right}$ 是 <strong>独立同分布</strong>的随机变量序列, 且 $E\left(X</em>{i}\right)=\mu, \operatorname{Var}\left(X_{i}\right)=\sigma^{2}&gt;0$ 存在, 若记</p>
+<h3 id="4-4-2-独立同分布下的中心极限定理"><a href="#4-4-2-独立同分布下的中心极限定理" class="headerlink" title="4.4.2 独立同分布下的中心极限定理"></a>4.4.2 独立同分布下的中心极限定理</h3><p><strong>定理  (林德伯格-莱维 (Lindeberg-Lévy) 中心极限定理)</strong> 设 $\left\{X_{n}\right\}$ 是 <strong>独立同分布</strong>的随机变量序列, 且 $E\left(X_{i}\right)=\mu, \operatorname{Var}\left(X_{i}\right)=\sigma^{2}&gt;0$ 存在, 若记</p>
 <script type="math/tex; mode=display">
 Y_{n}^{*}=\frac{X_{1}+X_{2}+\cdots+X_{n}-n \mu}{\sigma \sqrt{n}},</script><p>则对任意实数 $y$, 有</p>
 <script type="math/tex; mode=display">
-\lim _{n \rightarrow \infty} P\left(Y_{n}^{*} \leqslant y\right)=\Phi(y)=\frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{y} e^{-\frac{t^{2}}{2}} \mathrm{~d} t .</script><h3 id="4-4-4-独立不同分布下的中心极限定理"><a href="#4-4-4-独立不同分布下的中心极限定理" class="headerlink" title="4.4.4 独立不同分布下的中心极限定理"></a>4.4.4 独立不同分布下的中心极限定理</h3><p><strong>定理(林德伯格中心极限定理)</strong> 设<strong>独立</strong>随机变量序列 $\left{X<em>{n}\right}$ 满足$\displaystyle\lim </em>{n \rightarrow \infty} \frac{1}{\tau^{2} B<em>{n}^{2}} \sum</em>{i=1}^{n} \int<em>{\left|x-\mu</em>{i}\right|&gt;\tau B<em>{n}}\left(x-\mu</em>{i}\right)^{2} p_{i}(x) \mathrm{d} x=0$（林德伯格条件）, 则对任意的 $x$, 有</p>
+\lim _{n \rightarrow \infty} P\left(Y_{n}^{*} \leqslant y\right)=\Phi(y)=\frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{y} e^{-\frac{t^{2}}{2}} \mathrm{~d} t .</script><h3 id="4-4-4-独立不同分布下的中心极限定理"><a href="#4-4-4-独立不同分布下的中心极限定理" class="headerlink" title="4.4.4 独立不同分布下的中心极限定理"></a>4.4.4 独立不同分布下的中心极限定理</h3><p><strong>定理(林德伯格中心极限定理)</strong> 设<strong>独立</strong>随机变量序列 $\left\{X_{n}\right\}$ 满足$\displaystyle\lim _{n \rightarrow \infty} \frac{1}{\tau^{2} B_{n}^{2}} \sum_{i=1}^{n} \int_{\left|x-\mu_{i}\right|&gt;\tau B_{n}}\left(x-\mu_{i}\right)^{2} p_{i}(x) \mathrm{d} x=0$（林德伯格条件）, 则对任意的 $x$, 有</p>
 <script type="math/tex; mode=display">
 \lim _{n \rightarrow \infty} P\left(\frac{1}{B_{n}} \sum_{i=1}^{n}\left(X_{i}-\mu_{i}\right) \leqslant x\right)=\frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{x} e^{-t^{2} / 2} \mathrm{~d} t .</script><p>其中，$\tau&gt;0$是任意正实数，$B_n = \sqrt{\sigma_1^2 + \sigma_2^2 + \cdots + \sigma_n^2}$，$\mu_i$是$X_i$的数学期望值。</p>
-<p><strong>定理(李雅普诺夫中心极限定理)</strong> 设 $\left{X<em>{n}\right}\left{X</em>{n}\right}$ 为独立随机变量序列, 若存 在 $\delta&gt;0$, 满足</p>
+<p><strong>定理(李雅普诺夫中心极限定理)</strong> 设 $\left\{X_{n}\right\}\left\{X_{n}\right\}$ 为独立随机变量序列, 若存 在 $\delta&gt;0$, 满足</p>
 <script type="math/tex; mode=display">
 \lim _{n \rightarrow \infty} \frac{1}{B_{n}^{2+\delta}} \sum_{i=1}^{n} E\left(\left|X_{i}-\mu_{i}\right|^{2+\delta}\right)=0</script><p>则对任意的 $x$, 有</p>
 <script type="math/tex; mode=display">
-\lim _{n \rightarrow \infty} P\left(\frac{1}{B_{n}} \sum_{i=1}^{n}\left(X_{i}-\mu_{i}\right) \leqslant x\right)=\frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{x} \mathrm{e}^{-t^{2} /2} \mathrm{~d} t .</script><p>其中 $\mu<em>{i}$ 与 $B</em>{n}$ 如前所述.</p>
+\lim _{n \rightarrow \infty} P\left(\frac{1}{B_{n}} \sum_{i=1}^{n}\left(X_{i}-\mu_{i}\right) \leqslant x\right)=\frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{x} \mathrm{e}^{-t^{2} /2} \mathrm{~d} t .</script><p>其中 $\mu_{i}$ 与 $B_{n}$ 如前所述.</p>
 
       
 
@@ -1104,7 +1104,7 @@ MathJax.Hub.Queue(function() {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>

@@ -331,7 +331,7 @@
 <p>读写头靠传动臂驱动。</p>
  <img src="/2021/11/27/CSAPP-Ch6/Snipaste_2021-11-26_07-34-33.png" class="">   
 <p>磁盘以扇区大小的块来读写数据。</p>
-<p>对扇区的访问时间由三个主要部分组成：寻道时间 $T<em>{seek}$（seek time）、旋转时间 $T</em>{rotation}$（rotational latency）和传送时间 $T_{transfer}$（transfer time）</p>
+<p>对扇区的访问时间由三个主要部分组成：寻道时间 $T_{seek}$（seek time）、旋转时间 $T_{rotation}$（rotational latency）和传送时间 $T_{transfer}$（transfer time）</p>
 <h4 id="Practice-Problem-6-3"><a href="#Practice-Problem-6-3" class="headerlink" title="Practice Problem 6.3"></a>Practice Problem 6.3</h4><p>Estimate the average time (in ms) to access a sector on the following disk:</p>
 <div class="table-container">
 <table>
@@ -347,7 +347,7 @@
 <td>12,000 RPM</td>
 </tr>
 <tr>
-<td>$T_{avg\ seek}$</td>
+<td>$T_{avg seek}$</td>
 <td>5 ms</td>
 </tr>
 <tr>
@@ -947,7 +947,7 @@ MathJax.Hub.Queue(function() {
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>
