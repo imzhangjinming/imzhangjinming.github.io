@@ -182,15 +182,15 @@ $$
 
 ### 习题1.2
 
-**1.对于组合数$\binom{n}{r}$，证明：**
+**1.对于组合数$C_{n}^{r}$，证明：**
 
-​	（5）$\binom{a}{0}\binom{b}{n}+\binom{a}{1}\binom{b}{n-1}+\cdots+\binom{a}{n}\binom{b}{0}=\binom{a+b}{n},\ n=min\{a,b\}$
+​	（5）$C_{a}^{0}C_{b}^{n}+C_{a}^{1}C_{b}^{n-1}+\cdots+C_{a}^{n}C_{b}^{0}=C_{a+b}^{n},\ n=min\{a,b\}$
 
 ​	这一问考虑实际意义更加方便，从$a+b$个小球中取出$n$个小球，有多少种取法？
 
 ​	等式左边是先从$a$个球中取$r$个，再从$b$个球中取$n-r$个球，等式右边是直接从所有球中取出$n$个。最终的取法数量是相等的
 
-​	（6）$\binom{n}{0}^2+\binom{n}{1}^2+\cdots+\binom{n}{n}^2=\binom{2n}{n}$
+​	（6）$C_{n}^{0}^2+C_{n}^{1}^2+\cdots+C_{n}^{n}^2=C_{2n}^{n}$
 
 ​	第5问的一种特殊情况，即$a=b=n$，等式依然是成立的
 
@@ -214,7 +214,7 @@ $$
 
 $n$个0形成了$n+1$个空隙，放入$n$个1的可能方案有$C_{n+1}^n=n+1$种，所以概率为
 $$
-P=\frac{C_{n+1}^n}{C_{2n}^{n}}=\frac{n+1}{\binom{2n}{n}}
+P=\frac{C_{n+1}^n}{C_{2n}^{n}}=\frac{n+1}{C_{2n}^{n}}
 $$
 
 ## 1.3 概率的性质
@@ -662,14 +662,14 @@ $Var(X)=E(X^2)-E(X)^2=1-\frac{\pi}{4}$
 
 **二项分布** $X\sim b(n,p)$
 $$
-P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}
+P(X=k)=C_{n}^{k}p^k(1-p)^{n-k}
 $$
 **期望和方差**
 $$
 \begin{aligned}
-E(X)=&\ \sum_{k=0}^{n}k\binom{n}{k}p^k(1-p)^{n-k}\\
-=&\ n\sum_{k=1}^{n}\binom{n-1}{k-1}p^k(1-p)^{n-k}\\
-=&\ np\sum_{k=1}^{n}\binom{n-1}{k-1}p^{k-1}(1-p)^{(n-1)-(k-1)}\\
+E(X)=&\ \sum_{k=0}^{n}kC_{n}^{k}p^k(1-p)^{n-k}\\
+=&\ n\sum_{k=1}^{n}C_{n-1}^{k-1}p^k(1-p)^{n-k}\\
+=&\ np\sum_{k=1}^{n}C_{n-1}^{k-1}p^{k-1}(1-p)^{(n-1)-(k-1)}\\
 =&\ np
 \end{aligned}
 $$
@@ -693,7 +693,7 @@ $E(X)=\lambda,\ Var(X)=\lambda$
 
 **泊松定理** 在$n$重伯努利试验中，记事件$A$在一次试验中发生的概率为$p_n$（与试验次数$n$有关），如果当$n\to \infty$时，有$np_n\to \lambda$，则
 $$
-\lim_{n\to \infty}\binom{n}{k}p_n^k(1-p_n)^{n-k}=\frac{\lambda^k}{k!}e^{-\lambda}
+\lim_{n\to \infty}C_{n}^{k}p_n^k(1-p_n)^{n-k}=\frac{\lambda^k}{k!}e^{-\lambda}
 $$
 
 > 由于泊松定理是在$np_n\to \lambda$条件下获得的，故在计算二项分布$b(n,p)$时，当$n$很大，$p$很小，而乘积$\lambda=np$大小适中时，可以用泊松分布**作近似**
@@ -702,7 +702,7 @@ $$
 
 **超几何分布** $X\sim h(n,N,M)$
 $$
-P(X=k)=\frac{\binom{M}{k}\binom{N-M}{n-k}}{\binom{N}{n}},k=0,1,\cdots,r,\ r=\min\{M,n\},\ M\le N,\ n\le N
+P(X=k)=\frac{C_{M}^{k}C_{N-M}^{n-k}}{C_{N}^{n}},k=0,1,\cdots,r,\ r=\min\{M,n\},\ M\le N,\ n\le N
 $$
 超几何分布可以用来描述**不放回抽样**
 
@@ -730,7 +730,7 @@ $$
 
 > 在伯努利试验序列中，记每次试验中事件$A$发生的概率为$p$，如果$X$为事件$A$第$r$次出现时的试验次数，则$X$的可能取值为$r,r+1,\cdots,r+m,\cdots$。称$X$服从负二项分布或巴斯卡分布
 > $$
-> P(X=k)=\binom{k-1}{r-1}p^{r}(1-p)^{k-r},\ k=r,r+1,\cdots
+> P(X=k)=C_{k-1}^{r-1}p^{r}(1-p)^{k-r},\ k=r,r+1,\cdots
 > $$
 > 记为$X\sim Nb(r,p)$
 
@@ -747,7 +747,7 @@ $E(X)=\frac{r}{p},\ Var(X)=\frac{r(1-p)}{p^2}$
 $X\sim b(3,0.7)$
 $$
 \begin{aligned}
-P(X=2)+P(X=3)=&\ \binom{3}{2}0.7^2(1-0.7)^1+\binom{3}{3}0.7^3(1-0.7)^0\\
+P(X=2)+P(X=3)=&\ C_{3}^{2}0.7^2(1-0.7)^1+C_{3}^{3}0.7^3(1-0.7)^0\\
 =&\ 3\times 0.49 \times 0.3+0.343=0.784
 \end{aligned}
 $$
@@ -907,7 +907,7 @@ $\displaystyle P(X>3)=1-P(X\le 3)=1-\frac{3-2}{5-2}=\frac{2}{3}$
 
 则$Y\sim b(3,\displaystyle \frac{2}{3})$
 
-$\displaystyle P(Y\ge 2)=P(Y=2)+P(Y=3)=\binom{3}{2}(\frac{2}{3})^2\frac{1}{3}+\binom{3}{3}(\frac{2}{3})^3=\frac{4}{9}+\frac{8}{27}=\frac{20}{27}$
+$\displaystyle P(Y\ge 2)=P(Y=2)+P(Y=3)=C_{3}^{2}(\frac{2}{3})^2\frac{1}{3}+C_{3}^{3}(\frac{2}{3})^3=\frac{4}{9}+\frac{8}{27}=\frac{20}{27}$
 
 **8.统计调查表明，英格兰1875年至1951年期间在矿山发生10人或10人以上死亡的两次事故之间的时间$T$服从均值为241的指数分布。求$P(50<T<100)$**
 
@@ -929,7 +929,7 @@ $P(X\gt 10)=\displaystyle\int_{10}^{\infty}\displaystyle \frac{1}{5}e^{-\frac{x}
 
 $Y\sim b(5,e^{-2})$
 
-$P(Y=0)=\textstyle \binom{5}{0}(1-e^{-2})^5=0.4833$
+$P(Y=0)=\textstyle C_{5}^{0}(1-e^{-2})^5=0.4833$
 
 $P(Y\ge 1)=1-P(Y=0)=1-0.4833=0.5167$
 

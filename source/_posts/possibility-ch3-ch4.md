@@ -59,7 +59,7 @@ $$
 #### 多维超几何分布 不放回取球模型
 
 $$
-P(X_1=n_1,X_2=n_2,\cdots,X_r=n_r)=\frac{\displaystyle\binom{N_1}{n_1}\binom{N_2}{n_2}\cdots \binom{N_r}{n_r}}{\displaystyle\binom{N}{n}}
+P(X_1=n_1,X_2=n_2,\cdots,X_r=n_r)=\frac{\displaystyleC_{N_1}^{n_1}C_{N_2}^{n_2}\cdots C_{N_r}^{n_r}}{\displaystyleC_{N}^{n}}
 $$
 
 其中$n=n_1+n_2+\cdots n_r$
@@ -105,7 +105,7 @@ $\rho$是$X$和$Y$的相关系数
 
 不放回取球符合多维超几何分布
 $$
-P(X=x,Y=y)=\frac{\displaystyle\binom{50}{x}\binom{30}{y}\binom{20}{5-x-y}}{\displaystyle\binom{100}{5}}
+P(X=x,Y=y)=\frac{\displaystyleC_{50}^{x}C_{30}^{y}C_{20}^{5-x-y}}{\displaystyleC_{100}^{5}}
 $$
 
 | x\y  |     0     |    1     |    2     |    3    |    4     |    5     |
@@ -430,8 +430,8 @@ $X\sim b(n,0.5),\ Y\sim b(n,0.5)$，且$X+Y=n$
 $E(X)=\displaystyle\frac{n}{2},\ E(Y)=\displaystyle\frac{n}{2}$
 $$
 \begin{align}
-E(XY)&=\sum_{y=0}^{n} \sum_{x=0}^{n} xy\binom{n}{x}0.5^x0.5^{n-x}\binom{n}{y}0.5^y0.5^{n-y}\\
-&=\sum_{x=0}^{n}x(n-x)\binom{n}{x}0.5^x0.5^{n-x}\binom{n}{n-x}0.5^x0.5^{n-x}\\
+E(XY)&=\sum_{y=0}^{n} \sum_{x=0}^{n} xyC_{n}^{x}0.5^x0.5^{n-x}C_{n}^{y}0.5^y0.5^{n-y}\\
+&=\sum_{x=0}^{n}x(n-x)C_{n}^{x}0.5^x0.5^{n-x}C_{n}^{n-x}0.5^x0.5^{n-x}\\
 &=(\frac{1}{4})^n\frac{n(n-1)(2n-2)!}{(n-1)!(n-1)!}
 \end{align}
 $$
