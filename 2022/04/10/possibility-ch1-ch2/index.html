@@ -22,7 +22,7 @@
 <meta property="og:image" content="http://example.com/2022/04/10/possibility-ch1-ch2/Snipaste_2022-03-16_22-30-26.png">
 <meta property="og:image" content="http://example.com/2022/04/10/possibility-ch1-ch2/Snipaste_2022-03-17_13-19-04.png">
 <meta property="article:published_time" content="2022-04-10T09:53:07.000Z">
-<meta property="article:modified_time" content="2022-04-10T10:30:23.641Z">
+<meta property="article:modified_time" content="2022-04-10T11:58:26.349Z">
 <meta property="article:author" content="Mario">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2022/04/10/possibility-ch1-ch2/Snipaste_2022-03-14_21-08-49.png">
@@ -285,11 +285,11 @@ P(A)=\frac{k}{n}</script><h3 id="1-2-5-确定概率的几何方法"><a href="#1-
 <li>如果事件$A$为$\Omega$中的某个子区域，其度量大小用$S_A$表示，则事件$A$的概率为</li>
 </ul>
 <script type="math/tex; mode=display">
-P(A)=\frac{S_A}{S_{\Omega}}</script><h3 id="习题1-2"><a href="#习题1-2" class="headerlink" title="习题1.2"></a>习题1.2</h3><p><strong>1.对于组合数$\binom{n}{r}$，证明：</strong></p>
-<p>​    （5）$\binom{a}{0}\binom{b}{n}+\binom{a}{1}\binom{b}{n-1}+\cdots+\binom{a}{n}\binom{b}{0}=\binom{a+b}{n}, n=min\{a,b\}$</p>
+P(A)=\frac{S_A}{S_{\Omega}}</script><h3 id="习题1-2"><a href="#习题1-2" class="headerlink" title="习题1.2"></a>习题1.2</h3><p><strong>1.对于组合数$C_{n}^{r}$，证明：</strong></p>
+<p>​    （5）$C_{a}^{0}C_{b}^{n}+C_{a}^{1}C_{b}^{n-1}+\cdots+C_{a}^{n}C_{b}^{0}=C_{a+b}^{n}, n=min\{a,b\}$</p>
 <p>​    这一问考虑实际意义更加方便，从$a+b$个小球中取出$n$个小球，有多少种取法？</p>
 <p>​    等式左边是先从$a$个球中取$r$个，再从$b$个球中取$n-r$个球，等式右边是直接从所有球中取出$n$个。最终的取法数量是相等的</p>
-<p>​    （6）$\binom{n}{0}^2+\binom{n}{1}^2+\cdots+\binom{n}{n}^2=\binom{2n}{n}$</p>
+<p>​    （6）$C_{n}^{0}^2+C_{n}^{1}^2+\cdots+C_{n}^{n}^2=C_{2n}^{n}$</p>
 <p>​    第5问的一种特殊情况，即$a=b=n$，等式依然是成立的</p>
 <p><strong>16.（握草问题）一个人把六根草握在手中，仅仅露出它们的头和尾，然后随机地把六个头两两相接，六个尾也两两相接，求放开手后六根草恰巧连成一个环的概率。</strong></p>
 <p><del>样本空间内样本点个数为$(C_6^2C_4^2C_2^2)^2$</del></p>
@@ -302,7 +302,7 @@ P(A)=\frac{C_5^1C_4^1C_3^1C_2^1}{(C_6^2C_4^2C_2^2)^2}=\frac{2}{135}</script><p><
 <p>然后把所有的1放置在0中间，题目要求没有两个1连在一起，所以两个1之间必须有至少一个0，换句话说，就是把1放在0之间的空隙中。</p>
 <p>$n$个0形成了$n+1$个空隙，放入$n$个1的可能方案有$C_{n+1}^n=n+1$种，所以概率为</p>
 <script type="math/tex; mode=display">
-P=\frac{C_{n+1}^n}{C_{2n}^{n}}=\frac{n+1}{\binom{2n}{n}}</script><h2 id="1-3-概率的性质"><a href="#1-3-概率的性质" class="headerlink" title="1.3 概率的性质"></a>1.3 概率的性质</h2><p>性质1.3.1 $P(\varnothing)=0$</p>
+P=\frac{C_{n+1}^n}{C_{2n}^{n}}=\frac{n+1}{C_{2n}^{n}}</script><h2 id="1-3-概率的性质"><a href="#1-3-概率的性质" class="headerlink" title="1.3 概率的性质"></a>1.3 概率的性质</h2><p>性质1.3.1 $P(\varnothing)=0$</p>
 <p>性质1.3.2 若有限个事件$A_1, A_2, \cdots, A_n$互不相容，则有</p>
 <script type="math/tex; mode=display">
 P(\bigcup_{i=1}^{n}A_i)=\sum_{i=1}^{n}P(A_i)</script><p>性质1.3.3 对任一事件$A$，有</p>
@@ -546,12 +546,12 @@ p(x)=
 <p>$Var(X)=E(X^2)-E(X)^2=1-\frac{\pi}{4}$</p>
 <h2 id="2-4-常用离散分布"><a href="#2-4-常用离散分布" class="headerlink" title="2.4 常用离散分布"></a>2.4 常用离散分布</h2><h3 id="2-4-1-二项分布"><a href="#2-4-1-二项分布" class="headerlink" title="2.4.1 二项分布"></a>2.4.1 二项分布</h3><p><strong>二项分布</strong> $X\sim b(n,p)$</p>
 <script type="math/tex; mode=display">
-P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}</script><p><strong>期望和方差</strong></p>
+P(X=k)=C_{n}^{k}p^k(1-p)^{n-k}</script><p><strong>期望和方差</strong></p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-E(X)=&\ \sum_{k=0}^{n}k\binom{n}{k}p^k(1-p)^{n-k}\\
-=&\ n\sum_{k=1}^{n}\binom{n-1}{k-1}p^k(1-p)^{n-k}\\
-=&\ np\sum_{k=1}^{n}\binom{n-1}{k-1}p^{k-1}(1-p)^{(n-1)-(k-1)}\\
+E(X)=&\ \sum_{k=0}^{n}kC_{n}^{k}p^k(1-p)^{n-k}\\
+=&\ n\sum_{k=1}^{n}C_{n-1}^{k-1}p^k(1-p)^{n-k}\\
+=&\ np\sum_{k=1}^{n}C_{n-1}^{k-1}p^{k-1}(1-p)^{(n-1)-(k-1)}\\
 =&\ np
 \end{aligned}</script><p>$E(X^2)=n(n-1)p^2+np$</p>
 <p>$Var(X)=E(X^2)-E(X)^2=n(n-1)p^2+np-(np)^2=np(1-p)$</p>
@@ -562,12 +562,12 @@ P(X=k)=\frac{\lambda^k}{k!}e^{-\lambda},\ k=0,1,2,\cdots, \lambda>0</script><p><
 <p>泊松分布的期望和方差都是参数$\lambda$的值</p>
 <p><strong>泊松定理</strong> 在$n$重伯努利试验中，记事件$A$在一次试验中发生的概率为$p_n$（与试验次数$n$有关），如果当$n\to \infty$时，有$np_n\to \lambda$，则</p>
 <script type="math/tex; mode=display">
-\lim_{n\to \infty}\binom{n}{k}p_n^k(1-p_n)^{n-k}=\frac{\lambda^k}{k!}e^{-\lambda}</script><blockquote>
+\lim_{n\to \infty}C_{n}^{k}p_n^k(1-p_n)^{n-k}=\frac{\lambda^k}{k!}e^{-\lambda}</script><blockquote>
 <p>由于泊松定理是在$np_n\to \lambda$条件下获得的，故在计算二项分布$b(n,p)$时，当$n$很大，$p$很小，而乘积$\lambda=np$大小适中时，可以用泊松分布<strong>作近似</strong></p>
 </blockquote>
 <h3 id="2-4-3-超几何分布"><a href="#2-4-3-超几何分布" class="headerlink" title="2.4.3 超几何分布"></a>2.4.3 超几何分布</h3><p><strong>超几何分布</strong> $X\sim h(n,N,M)$</p>
 <script type="math/tex; mode=display">
-P(X=k)=\frac{\binom{M}{k}\binom{N-M}{n-k}}{\binom{N}{n}},k=0,1,\cdots,r,\ r=\min\{M,n\},\ M\le N,\ n\le N</script><p>超几何分布可以用来描述<strong>不放回抽样</strong></p>
+P(X=k)=\frac{C_{M}^{k}C_{N-M}^{n-k}}{C_{N}^{n}},k=0,1,\cdots,r,\ r=\min\{M,n\},\ M\le N,\ n\le N</script><p>超几何分布可以用来描述<strong>不放回抽样</strong></p>
 <p><strong>期望和方差</strong></p>
 <p>$E(X)=n\frac{M}{N}, Var(X)=\frac{nM(N-M)(N-n)}{N^2(N-1)}$</p>
 <h3 id="2-4-4-几何分布与负二项分布"><a href="#2-4-4-几何分布与负二项分布" class="headerlink" title="2.4.4 几何分布与负二项分布"></a>2.4.4 几何分布与负二项分布</h3><p><strong>一、几何分布</strong> $X\sim Ge(p)$</p>
@@ -581,7 +581,7 @@ P(X>m+n|X>m)=P(X>n)</script><p><strong>二、负二项分布（巴斯卡分布�
 <blockquote>
 <p>在伯努利试验序列中，记每次试验中事件$A$发生的概率为$p$，如果$X$为事件$A$第$r$次出现时的试验次数，则$X$的可能取值为$r,r+1,\cdots,r+m,\cdots$。称$X$服从负二项分布或巴斯卡分布</p>
 <script type="math/tex; mode=display">
-P(X=k)=\binom{k-1}{r-1}p^{r}(1-p)^{k-r},\ k=r,r+1,\cdots</script><p>记为$X\sim Nb(r,p)$</p>
+P(X=k)=C_{k-1}^{r-1}p^{r}(1-p)^{k-r},\ k=r,r+1,\cdots</script><p>记为$X\sim Nb(r,p)$</p>
 </blockquote>
 <p><strong>期望和方差</strong></p>
 <p>$E(X)=\frac{r}{p}, Var(X)=\frac{r(1-p)}{p^2}$</p>
@@ -590,7 +590,7 @@ P(X=k)=\binom{k-1}{r-1}p^{r}(1-p)^{k-r},\ k=r,r+1,\cdots</script><p>记为$X\sim
 <p>$X\sim b(3,0.7)$</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
-P(X=2)+P(X=3)=&\ \binom{3}{2}0.7^2(1-0.7)^1+\binom{3}{3}0.7^3(1-0.7)^0\\
+P(X=2)+P(X=3)=&\ C_{3}^{2}0.7^2(1-0.7)^1+C_{3}^{3}0.7^3(1-0.7)^0\\
 =&\ 3\times 0.49 \times 0.3+0.343=0.784
 \end{aligned}</script><p><strong>8.设$X$服从泊松分布，且已知$P(X=1)=P(X=2)$，求$P(X=4)$</strong></p>
 <p>$P(X=1)=\lambda e^{-\lambda}=\frac{\lambda^2}{2!}e^{-\lambda}=P(X=2)\Rightarrow \lambda=2$</p>
@@ -684,7 +684,7 @@ p(x)=
 <p>$\displaystyle P(X&gt;3)=1-P(X\le 3)=1-\frac{3-2}{5-2}=\frac{2}{3}$</p>
 <p>设随机变量$Y$：观测试验中，观测值大于3的次数</p>
 <p>则$Y\sim b(3,\displaystyle \frac{2}{3})$</p>
-<p>$\displaystyle P(Y\ge 2)=P(Y=2)+P(Y=3)=\binom{3}{2}(\frac{2}{3})^2\frac{1}{3}+\binom{3}{3}(\frac{2}{3})^3=\frac{4}{9}+\frac{8}{27}=\frac{20}{27}$</p>
+<p>$\displaystyle P(Y\ge 2)=P(Y=2)+P(Y=3)=C_{3}^{2}(\frac{2}{3})^2\frac{1}{3}+C_{3}^{3}(\frac{2}{3})^3=\frac{4}{9}+\frac{8}{27}=\frac{20}{27}$</p>
 <p><strong>8.统计调查表明，英格兰1875年至1951年期间在矿山发生10人或10人以上死亡的两次事故之间的时间$T$服从均值为241的指数分布。求$P(50&lt;T&lt;100)$</strong></p>
 <p>$\displaystyle \frac{1}{\lambda}=241\Rightarrow \lambda = \frac{1}{241}$</p>
 <p>$\displaystyle P(50&lt;T&lt;100)=F(100)-F(50)=1-e^{-\frac{1}{241} 100}-(1-e^{-\frac{1}{241} 50})=0.1523$</p>
@@ -697,7 +697,7 @@ p(x)=
 \end{cases}</script><p><strong>某顾客在窗口等待服务，若超过10min他就离开。他一个月要到银行5次，以$Y$表示一个月内他未等到服务而离开窗口的次数，求$P(Y\ge 1)$</strong></p>
 <p>$P(X\gt 10)=\displaystyle\int_{10}^{\infty}\displaystyle \frac{1}{5}e^{-\frac{x}{5}}dx=e^{-2}$</p>
 <p>$Y\sim b(5,e^{-2})$</p>
-<p>$P(Y=0)=\textstyle \binom{5}{0}(1-e^{-2})^5=0.4833$</p>
+<p>$P(Y=0)=\textstyle C_{5}^{0}(1-e^{-2})^5=0.4833$</p>
 <p>$P(Y\ge 1)=1-P(Y=0)=1-0.4833=0.5167$</p>
 <p><strong>25.设随机变量$X$服从正态分布$N(60,3^2)$，求实数$a,b,c,d$使得$X$落在如下五个区间中的概率之比为$7:24:38:24:7$</strong></p>
 <script type="math/tex; mode=display">
