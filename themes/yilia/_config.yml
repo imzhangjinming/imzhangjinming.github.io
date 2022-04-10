@@ -134,9 +134,9 @@ friends:
 aboutme: 航天专业的<br>典型工科男<br>有个喜欢我和我喜欢的人<br><br>喜欢编程<br>热爱折腾<br>间歇性摸鱼大师
 
 # MathJax Support
-# mathjax:
-#  enable: true
-#  per_page: true
+mathjax:
+ enable: true
+ per_page: true
 #  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
 # Han Support docs: https://hanzi.pro/
