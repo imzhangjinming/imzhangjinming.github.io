@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ $# -eq 2 ]
+then
+	sed -E 's/!\[(.*)\]\(\/Users.*\.(png|PNG|jpeg)\)/{% asset_img \1.\2 %}/gp' $1 > $2
+else
+	echo "usage: s-for-md src_file dst_file"
+fi
