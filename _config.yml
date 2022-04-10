@@ -126,11 +126,11 @@ jsonContent:
       categories: false
       tags: true 
 
-# MathJax
-math:
-  engine: 'mathjax'
-  mathjax:
-    src: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML 
+# # MathJax
+# math:
+#   engine: 'mathjax'
+#   mathjax:
+#     src: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML 
 
 markdown:
   plugins:
@@ -139,4 +139,4 @@ markdown:
     - markdown-it-sub
     - markdown-it-abbr
     - markdown-it-emoji
-    - hexo-math
+    # - hexo-math
