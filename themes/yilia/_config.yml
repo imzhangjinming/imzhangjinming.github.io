@@ -135,8 +135,8 @@ aboutme: 航天专业的<br>典型工科男<br>有个喜欢我和我喜欢的人
 
 # MathJax Support
 mathjax:
- enable: true
- per_page: true
+  enable: true
+  per_page: true
 #  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
 # Han Support docs: https://hanzi.pro/
