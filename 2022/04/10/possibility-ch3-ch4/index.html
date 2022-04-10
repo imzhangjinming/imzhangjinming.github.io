@@ -16,7 +16,7 @@
 <meta property="og:description" content="补习基础数理知识之概率论">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-10T10:30:42.000Z">
-<meta property="article:modified_time" content="2022-04-10T11:58:36.406Z">
+<meta property="article:modified_time" content="2022-04-10T14:42:31.924Z">
 <meta property="article:author" content="Mario">
 <meta name="twitter:card" content="summary">
   
@@ -203,7 +203,7 @@ P(X_1=n_1,X_2=n_2,\cdots,X_r=n_r)=\frac{n!}{n_1!n_2!\cdots n_r!}p_1^{n_1}p_2^{n_
 \end{aligned}</script><p>其中$n=n_1+n_2+\cdots n_r$</p>
 <p>这个分布叫做$r$项分布，$r=2$是就是二项分布。</p>
 <h4 id="多维超几何分布-不放回取球模型"><a href="#多维超几何分布-不放回取球模型" class="headerlink" title="多维超几何分布 不放回取球模型"></a>多维超几何分布 不放回取球模型</h4><script type="math/tex; mode=display">
-P(X_1=n_1,X_2=n_2,\cdots,X_r=n_r)=\frac{\displaystyleC_{N_1}^{n_1}C_{N_2}^{n_2}\cdots C_{N_r}^{n_r}}{\displaystyleC_{N}^{n}}</script><p>其中$n=n_1+n_2+\cdots n_r$</p>
+P(X_1=n_1,X_2=n_2,\cdots,X_r=n_r)=\frac{\displaystyle C_{N_1}^{n_1}C_{N_2}^{n_2}\cdots C_{N_r}^{n_r}}{\displaystyle C_{N}^{n}}</script><p>其中$n=n_1+n_2+\cdots n_r$</p>
 <h4 id="多维均匀分布-X-1-X-2-cdots-X-n-sim-U-D"><a href="#多维均匀分布-X-1-X-2-cdots-X-n-sim-U-D" class="headerlink" title="多维均匀分布 $(X_1,X_2,\cdots,X_n)\sim U(D)$"></a>多维均匀分布 $(X_1,X_2,\cdots,X_n)\sim U(D)$</h4><p>设$D$为$R^n$中的一个有界区域，其度量（平面的为面积，空间的为体积等）为$S_D$，如果多维随机变量$(X_1,X_2,\cdots,X_n)$的联合密度函数为</p>
 <script type="math/tex; mode=display">
 p(x_1,x_2,\cdots ,x_n)=
@@ -223,7 +223,7 @@ p(x,y)=\frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}\exp\{-\frac{1}{2(1-\rho^2)}
 <h3 id="习题3-1"><a href="#习题3-1" class="headerlink" title="习题3.1"></a>习题3.1</h3><p><strong>1.100件产品中有50件一等品、30件二等品、20件三等品。从中任取5件，以$X,Y$分别表示取出的5件中一等品、二等品的件数，在以下情况下求$(X,Y)$的联合分布列。（1）不放回抽取；（2）有放回抽取。</strong></p>
 <p>不放回取球符合多维超几何分布</p>
 <script type="math/tex; mode=display">
-P(X=x,Y=y)=\frac{\displaystyleC_{50}^{x}C_{30}^{y}C_{20}^{5-x-y}}{\displaystyleC_{100}^{5}}</script><div class="table-container">
+P(X=x,Y=y)=\frac{\displaystyle C_{50}^{x}C_{30}^{y}C_{20}^{5-x-y}}{\displaystyle C_{100}^{5}}</script><div class="table-container">
 <table>
 <thead>
 <tr>
