@@ -6,24 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>UNIX环境高级编程 第七章 进程环境 | HZ&#39;s blogs</title>
+  <title>常用的概率分布及其数学期望和方差 | HZ&#39;s blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="APUE 第七章 进程环境">
+  <meta name="description" content="概率论知识点整理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UNIX环境高级编程 第七章 进程环境">
-<meta property="og:url" content="http://example.com/2021/08/05/APUE-Ch7/index.html">
+<meta property="og:title" content="常用的概率分布及其数学期望和方差">
+<meta property="og:url" content="http://example.com/2022/04/11/common-distribution/index.html">
 <meta property="og:site_name" content="HZ&#39;s blogs">
-<meta property="og:description" content="APUE 第七章 进程环境">
+<meta property="og:description" content="概率论知识点整理">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2021/08/05/APUE-Ch7/network-cables-499792_1920.jpg">
-<meta property="og:image" content="http://example.com/2021/08/05/APUE-Ch7/Snipaste_2021-08-05_08-28-23.png">
-<meta property="og:image" content="http://example.com/2021/08/05/APUE-Ch7/Snipaste_2021-08-05_08-53-29.png">
-<meta property="og:image" content="http://example.com/2021/08/05/APUE-Ch7/Snipaste_2021-08-05_11-19-32.png">
-<meta property="article:published_time" content="2021-08-05T08:29:44.000Z">
-<meta property="article:modified_time" content="2022-04-10T09:44:45.120Z">
+<meta property="article:published_time" content="2022-04-11T00:25:11.000Z">
+<meta property="article:modified_time" content="2022-04-11T00:35:25.422Z">
 <meta property="article:author" content="Mario">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/08/05/APUE-Ch7/network-cables-499792_1920.jpg">
   
     <link rel="alternative" href="/atom.xml" title="HZ&#39;s blogs" type="application/atom+xml">
   
@@ -169,116 +164,35 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-APUE-Ch7" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-common-distribution" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      UNIX环境高级编程 第七章 进程环境
+      常用的概率分布及其数学期望和方差
     </h1>
   
 
         
-        <a href="/2021/08/05/APUE-Ch7/" class="archive-article-date">
-  	<time datetime="2021-08-05T08:29:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-05</time>
+        <a href="/2022/04/11/common-distribution/" class="archive-article-date">
+  	<time datetime="2022-04-11T00:25:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <img src="/2021/08/05/APUE-Ch7/network-cables-499792_1920.jpg" class="">
-<p>APUE 第七章 进程环境</p>
+        <p>概率论知识点整理</p>
 <span id="more"></span>
-<h1 id="第七章-进程环境"><a href="#第七章-进程环境" class="headerlink" title="第七章 进程环境"></a>第七章 进程环境</h1><h2 id="7-2-main-函数"><a href="#7-2-main-函数" class="headerlink" title="7.2 main 函数"></a>7.2 main 函数</h2><p>C程序总是从 <code>main</code> 函数开始执行。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc,<span class="keyword">char</span> **argv)</span></span>;</span><br></pre></td></tr></table></figure>
-<p>当内核执行C程序时，在调用  <code>main</code> 函数前先调用一个特殊的<strong>启动程序</strong>。编译器会调用连接编辑器，后者会将启动程序的地址放置在可执行文件的开始，这样启动程序就会先于  <code>main</code> 函数执行，并为  <code>main</code> 函数从内核取得<strong>命令行参数</strong>和<strong>环境变量值</strong>，为执行 <code>main</code> 函数做好准备。</p>
-<h2 id="7-3-进程终止"><a href="#7-3-进程终止" class="headerlink" title="7.3 进程终止"></a>7.3 进程终止</h2><p>一共有8种方式终止进程，其中5种是正常终止</p>
-<ul>
-<li>从 <code>main</code> 函数返回</li>
-<li>调用 <code>exit</code> 函数</li>
-<li>调用<code>_exit</code> 或 <code>_Exit</code> 函数</li>
-<li>最后一个<strong>线程</strong>从其启动程序返回</li>
-<li>最后一个<strong>线程</strong>调用 <code>pthread_exit</code> </li>
-</ul>
-<p>异常终止有3种</p>
-<ul>
-<li>调用 <code>abort</code> </li>
-<li>接到一个信号</li>
-<li>最后一个<strong>线程</strong> 对<strong>取消请求</strong>做出响应</li>
-</ul>
-<ol>
-<li><p><strong>退出函数</strong></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exit</span><span class="params">(<span class="keyword">int</span> status)</span></span>;</span><br><span class="line"><span class="keyword">void</span> _Exit(<span class="keyword">int</span> status);</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="keyword">void</span> _exit(<span class="keyword">int</span> status);</span><br></pre></td></tr></table></figure>
-<p><code>_Exit</code> 和 <code>_exit</code> 直接进入内核，<code>exit</code> 函数先执行一些清理操作后再返回内核</p>
-<p>这三个函数都有一个整型参数，称为<strong>退出状态</strong></p>
-<p><code>main</code> 函数返回一个整型值与使用该整型值调用 <code>exit</code> 是等价的 <code>return 0;</code> = <code>exit(0);</code></p>
-</li>
-</ol>
-<ol>
-<li><p><code>atexit</code> <strong>函数</strong></p>
-<p>进程可以登记一些函数供 <code>exit</code> 自动调用，这些函数被称为 <strong>终止处理程序</strong>（exit handler）。<code>atexit</code> 函数就是用来登记这些函数的</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">atexit</span><span class="params">(<span class="keyword">void</span> (*func)(<span class="keyword">void</span>))</span></span>;</span><br><span class="line"><span class="comment">//Returns: 0 if OK, nonzero on error</span></span><br></pre></td></tr></table></figure>
-<p>注意， <code>exit</code> 调用这些函数的顺序与它们被登记的顺序<strong>相反</strong>；如果同一个函数多次注册，那么它也会被多次调用</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/imzhangjinming/APUE/blob/master/7/atexit_use.c">使用 <code>atexit</code> 函数</a></p>
-</li>
-</ol>
-<p>下图显示了一个C程序是如何启动的，以及它终止的各种方式</p>
-<img src="/2021/08/05/APUE-Ch7/Snipaste_2021-08-05_08-28-23.png" class="">
-<h2 id="7-4-命令行参数"><a href="#7-4-命令行参数" class="headerlink" title="7.4 命令行参数"></a>7.4 命令行参数</h2><p>当执行一个程序时，调用 <code>exec</code> 的进程可将命令行参数传递给该新程序。</p>
-<h2 id="7-5-环境表"><a href="#7-5-环境表" class="headerlink" title="7.5 环境表"></a>7.5 环境表</h2><p>每个程序都能接收到一张环境表，它是一个字符指针数组，每个指针都指向一个以 null 字符结尾的C字符串（环境字符串）</p>
-<p><strong>环境表的地址</strong>保存在一个被称为<strong>环境指针</strong>的全局变量 <code>environ</code> 中</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="keyword">char</span> **environ；</span><br></pre></td></tr></table></figure>
-<h2 id="7-6-C程序的存储空间布局"><a href="#7-6-C程序的存储空间布局" class="headerlink" title="7.6 C程序的存储空间布局"></a>7.6 C程序的存储空间布局</h2><p>C程序由下列几部分组成：</p>
-<ul>
-<li>Text segment 正文段 。包含机器指令，可共享</li>
-<li>Initialized data segment 初始化了的数据段 。 赋了初值的全局变量</li>
-<li>Uninitialized data segment 未初始化的数据段 ，也称为 <strong>bss</strong>（block started by symbol）段。没赋初值的全局变量</li>
-<li>Stack 栈 。 自动变量及每次函数调用需要保存的信息</li>
-<li>Heap 堆 。 动态内存分配</li>
-</ul>
-<img src="/2021/08/05/APUE-Ch7/Snipaste_2021-08-05_08-53-29.png" class="">
-<h2 id="7-8-存储空间分配"><a href="#7-8-存储空间分配" class="headerlink" title="7.8 存储空间分配"></a>7.8 存储空间分配</h2><p>ISO C 说明了3个用于存储空间动态分配的函数</p>
-<ul>
-<li>malloc     分配指定字节数的存储区。存储区中的初始值不确定</li>
-<li>calloc      为 指定数量指定长度的对象分配存储空间。存储区中的每一位都初始化为0</li>
-<li>realloc    增加或减少以前分配区的长度。</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">malloc</span><span class="params">(<span class="keyword">size_t</span> size)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">calloc</span><span class="params">(<span class="keyword">size_t</span> nobj, <span class="keyword">size_t</span> size)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">realloc</span><span class="params">(<span class="keyword">void</span> *ptr, <span class="keyword">size_t</span> newsize)</span></span>;</span><br><span class="line"><span class="comment">//All three return: non-null pointer if OK, NULL on error</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">free</span><span class="params">(<span class="keyword">void</span> *ptr)</span></span>;</span><br></pre></td></tr></table></figure>
-<h2 id="7-9-环境变量"><a href="#7-9-环境变量" class="headerlink" title="7.9 环境变量"></a>7.9 环境变量</h2><p>环境变量以环境字符串的方式存储：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name=value</span><br></pre></td></tr></table></figure>
-<p>可用 <code>getenv</code> 函数取得环境变量的值</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">getenv</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *name)</span></span>;</span><br><span class="line"><span class="comment">//Returns: pointer to value associated with name, NULL if not found</span></span><br></pre></td></tr></table></figure>
-<p>返回的指针指向 <code>name</code> 参数对应的 <code>value</code> </p>
-<p>可用以下函数修改环境变量的值</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">putenv</span><span class="params">(<span class="keyword">char</span> *str)</span></span>;</span><br><span class="line"><span class="comment">//Returns: 0 if OK, nonzero on error</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">setenv</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *name, <span class="keyword">const</span> <span class="keyword">char</span> *value, <span class="keyword">int</span> rewrite)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">unsetenv</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *name)</span></span>;</span><br><span class="line"><span class="comment">//Both return: 0 if OK, −1 on error</span></span><br></pre></td></tr></table></figure>
-<p>这三个函数操作如下：</p>
-<ul>
-<li><code>putenv</code> 取形式为 <code>name=value</code> 的字符串，将其放到环境表中，如果 <code>name</code> 已经存在，则先删除原来的定义</li>
-<li><p><code>setenv</code> 将 <code>name</code> 设置为 <code>value</code> 。如果在环境中 <code>name</code> 已经存在，那么 1. 如果 <code>rewrite != 0</code> ，则首先删除原来的定义； 2. 如果 <code>rewrite=0</code>，<code>name</code> 不设置为新的 <code>value</code> ，程序也不出错</p>
-</li>
-<li><p><code>unsetenv</code> 删除 <code>name</code> 的定义</p>
-</li>
-</ul>
-<h2 id="7-10-setjmp-和-longjmp"><a href="#7-10-setjmp-和-longjmp" class="headerlink" title="7.10 setjmp 和 longjmp"></a>7.10 setjmp 和 longjmp</h2><p>这俩函数具有跳转功能，对于处理发生在很深层嵌套函数调用中的出错情况是非常有用的。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;setjmp.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">setjmp</span><span class="params">(jmp_buf env)</span></span>;</span><br><span class="line"><span class="comment">//Returns: 0 if called directly, nonzero if returning from a call to longjmp</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">longjmp</span><span class="params">(jmp_buf env, <span class="keyword">int</span> val)</span></span>;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p><strong>自动变量、寄存器变量和易失变量</strong></p>
-<p>在调用 longjmp 函数后，各种变量会恢复调用 setjmp 处的值吗？</p>
-</li>
-</ol>
-<p>   <a target="_blank" rel="noopener" href="https://github.com/imzhangjinming/APUE/blob/master/7/longjmp_var.c">使用实际程序验证</a></p>
-<p>   在我的电脑上运行结果：</p>
-<p>   不进行任何编译优化的情况下，只有寄存器变量能够恢复首次调用  <code>setjmp</code> 时的值；</p>
-<p>   使用编译优化之后，自动变量和寄存器变量能够恢复首次调用 <code>setjmp</code> 时的值    </p>
-<h2 id="7-11-getrlimit-和-setrlimit-函数"><a href="#7-11-getrlimit-和-setrlimit-函数" class="headerlink" title="7.11 getrlimit 和 setrlimit 函数"></a>7.11 getrlimit 和 setrlimit 函数</h2><p>每个<strong>进程</strong>都有一组资源限制，其中一些可以用 getrlimit 和 setrlimit 函数查询和更改</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/resource.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getrlimit</span><span class="params">(<span class="keyword">int</span> resource, struct rlimit *rlptr)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">setrlimit</span><span class="params">(<span class="keyword">int</span> resource, <span class="keyword">const</span> struct rlimit *rlptr)</span></span>;</span><br><span class="line"><span class="comment">//Both return: 0 if OK, −1 on error</span></span><br></pre></td></tr></table></figure>
-<p>其中 <code>rlimit</code> 结构体定义如下</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">rlimit</span> &#123;</span></span><br><span class="line">	<span class="keyword">rlim_t</span> rlim_cur; <span class="comment">/* soft limit: current limit */</span></span><br><span class="line">	<span class="keyword">rlim_t</span> rlim_max; <span class="comment">/* hard limit: maximum value for rlim_cur */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p><code>resource</code> 可选下列值</p>
-<img src="/2021/08/05/APUE-Ch7/Snipaste_2021-08-05_11-19-32.png" class="">
+
+
+	<div class="row">
+    <embed src="distribution.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
 
       
 
@@ -289,7 +203,7 @@
       
       <!--显示阅读次数-->
       
-        <a class="cloud-tie-join-count" href="/2021/08/05/APUE-Ch7/" style="color:gray;font-size:14px;">
+        <a class="cloud-tie-join-count" href="/2022/04/11/common-distribution/" style="color:gray;font-size:14px;">
           <span class="icon-smile"></span>
           <span id="busuanzi_container_page_pv">
             阅读量(<span id="busuanzi_value_page_pv"></span>)
@@ -303,7 +217,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
+        			<a href="/categories/aeronautics//" class="article-tag-list-link color2">aeronautics</a>
         		</li>
       		
 		</ul>
@@ -358,7 +272,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/08/05/APUE-Ch7/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/04/11/common-distribution/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -372,18 +286,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/08/06/c-change-icon/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          WinForm 更改程序图标
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/08/04/APUE-Ch6/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">UNIX环境高级编程 第六章 -- 学习笔记</div>
+    <a href="/2022/04/10/possibility-ch3-ch4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">概率论与数理统计教程 茆诗松 第三、四章</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -410,7 +315,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E8%BF%9B%E7%A8%8B%E7%8E%AF%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">第七章 进程环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-main-%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text">7.2 main 函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-%E8%BF%9B%E7%A8%8B%E7%BB%88%E6%AD%A2"><span class="toc-number">1.2.</span> <span class="toc-text">7.3 进程终止</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0"><span class="toc-number">1.3.</span> <span class="toc-text">7.4 命令行参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-5-%E7%8E%AF%E5%A2%83%E8%A1%A8"><span class="toc-number">1.4.</span> <span class="toc-text">7.5 环境表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-6-C%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E5%B8%83%E5%B1%80"><span class="toc-number">1.5.</span> <span class="toc-text">7.6 C程序的存储空间布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-8-%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E5%88%86%E9%85%8D"><span class="toc-number">1.6.</span> <span class="toc-text">7.8 存储空间分配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-9-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">1.7.</span> <span class="toc-text">7.9 环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-10-setjmp-%E5%92%8C-longjmp"><span class="toc-number">1.8.</span> <span class="toc-text">7.10 setjmp 和 longjmp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-11-getrlimit-%E5%92%8C-setrlimit-%E5%87%BD%E6%95%B0"><span class="toc-number">1.9.</span> <span class="toc-text">7.11 getrlimit 和 setrlimit 函数</span></a></li></ol></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
