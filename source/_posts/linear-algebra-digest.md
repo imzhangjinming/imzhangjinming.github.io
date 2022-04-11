@@ -2,7 +2,7 @@
 title: 线性代数的闪光点
 date: 2022-04-11 17:22:32
 categories:
--aeronautics
+- aeronautics
 tags:
 ---
 
