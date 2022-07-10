@@ -8,11 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>HZ&#39;s blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="第一章 统计学习及监督学习概论1.3 统计学习方法三要素 统计学习方法&#x3D;模型+策略+算法1.3.1 模型即方法所要学习的条件概率分布或决策函数 1.3.2 策略即以什么样的标准评价模型的好坏。统计学习的目标就是从假设空间中选取最优的模型。  损失函数和风险函数 经验风险最小化和结构风险最小化  简单来说，就是学习的目标函数。 1.3.3 算法使目标函数最优化的方法。 1.7 生成模型与判别模型这个">
+<meta property="og:type" content="article">
 <meta property="og:title" content="HZ&#39;s blogs">
-<meta property="og:url" content="http://example.com/page/6/index.html">
+<meta property="og:url" content="http://example.com/2022/06/30/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="HZ&#39;s blogs">
+<meta property="og:description" content="第一章 统计学习及监督学习概论1.3 统计学习方法三要素 统计学习方法&#x3D;模型+策略+算法1.3.1 模型即方法所要学习的条件概率分布或决策函数 1.3.2 策略即以什么样的标准评价模型的好坏。统计学习的目标就是从假设空间中选取最优的模型。  损失函数和风险函数 经验风险最小化和结构风险最小化  简单来说，就是学习的目标函数。 1.3.3 算法使目标函数最优化的方法。 1.7 生成模型与判别模型这个">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-06-30T00:29:09.756Z">
+<meta property="article:modified_time" content="2022-07-10T08:50:21.046Z">
 <meta property="article:author" content="Mario">
 <meta name="twitter:card" content="summary">
   
@@ -156,32 +160,491 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-pythonNotes" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-统计学习方法-笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/07/24/pythonNotes/">PYTHON编程快速上手，让繁琐工作自动化 -- 读书摘抄</a>
-    </h1>
-  
-
-        
-        <a href="/2021/07/24/pythonNotes/" class="archive-article-date">
-  	<time datetime="2021-07-24T07:55:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-24</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <img src="/2021/07/24/pythonNotes/1.jpg" class="">
-        
-          <a class="article-more-a" href="/2021/07/24/pythonNotes/#more">more >></a>
-        
+        <h1 id="第一章-统计学习及监督学习概论"><a href="#第一章-统计学习及监督学习概论" class="headerlink" title="第一章 统计学习及监督学习概论"></a>第一章 统计学习及监督学习概论</h1><h2 id="1-3-统计学习方法三要素"><a href="#1-3-统计学习方法三要素" class="headerlink" title="1.3 统计学习方法三要素"></a>1.3 统计学习方法三要素</h2><script type="math/tex; mode=display">
+统计学习方法=模型+策略+算法</script><h3 id="1-3-1-模型"><a href="#1-3-1-模型" class="headerlink" title="1.3.1 模型"></a>1.3.1 模型</h3><p>即方法所要学习的<strong>条件概率分布</strong>或<strong>决策函数</strong></p>
+<h3 id="1-3-2-策略"><a href="#1-3-2-策略" class="headerlink" title="1.3.2 策略"></a>1.3.2 策略</h3><p>即以什么样的<strong>标准</strong>评价模型的好坏。统计学习的目标就是从假设空间中选取最优的模型。</p>
+<ul>
+<li>损失函数和风险函数</li>
+<li>经验风险最小化和结构风险最小化</li>
+</ul>
+<p>简单来说，就是学习的目标函数。</p>
+<h3 id="1-3-3-算法"><a href="#1-3-3-算法" class="headerlink" title="1.3.3 算法"></a>1.3.3 算法</h3><p>使目标函数最优化的方法。</p>
+<h2 id="1-7-生成模型与判别模型"><a href="#1-7-生成模型与判别模型" class="headerlink" title="1.7 生成模型与判别模型"></a>1.7 生成模型与判别模型</h2><p>这个帖子解释得比较清晰</p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/20446337/answer/1661760071">机器学习“判定模型”和“生成模型”有什么区别？ - 马同学的回答 - 知乎</a></p>
+<h1 id="第三章-k近邻法"><a href="#第三章-k近邻法" class="headerlink" title="第三章 k近邻法"></a>第三章 k近邻法</h1><h2 id="3-3-k近邻法的实现：kd树"><a href="#3-3-k近邻法的实现：kd树" class="headerlink" title="3.3 k近邻法的实现：kd树"></a>3.3 k近邻法的实现：kd树</h2><p>kd树是树形数据结构，主要作用是<strong>加快k近邻搜索</strong>。</p>
+<h1 id="第五章-决策树"><a href="#第五章-决策树" class="headerlink" title="第五章 决策树"></a>第五章 决策树</h1><p>决策树可以看作一系列if-then规则的集合，这些规则<strong>互斥且完备</strong>，能够根据这些规则判断输入的类别。</p>
+<p>决策树学习算法包含特征选择、决策树的生成与决策树的剪枝过程。</p>
+<h2 id="5-2-特征选择"><a href="#5-2-特征选择" class="headerlink" title="5.2 特征选择"></a>5.2 特征选择</h2><h3 id="5-2-2-信息增益"><a href="#5-2-2-信息增益" class="headerlink" title="5.2.2 信息增益"></a>5.2.2 信息增益</h3><p><strong>（熵的定义）</strong>在信息论与概率统计中，熵是随机变量不确定性的度量。设$X$是一个取有限个值的离散随机变量，其概率分布为</p>
+<script type="math/tex; mode=display">
+P(X=x_i)=p_i,\ i=1,2,\cdots,n</script><p>随机变量$X$的熵定义为</p>
+<script type="math/tex; mode=display">
+H(X)=-\sum^{n}_{i=1}p_i\log{p_i}</script><p>熵越大，随机变量的不确定性就越大。</p>
+<p>随机变量$X$给定的条件下随机变量$Y$的条件熵$H(Y|X)$，定义为$X$给定条件下$Y$的条件概率分布的熵对$X$对数学期望</p>
+<script type="math/tex; mode=display">
+H(Y|X)=\sum^{n}_{i=1}p_iH(Y|X=x_i)</script><p>其中，$p_i=P(X=x_i), i=1,2,\cdots,n$</p>
+<p><strong>（信息增益的定义）</strong>特征$A$对训练数据集$D$的信息增益$g(D, A)$定义为集合$D$的经验熵$H(D)$与特征$A$给定条件下$D$的经验条件熵$H(D|A)$之差，即</p>
+<script type="math/tex; mode=display">
+g(D,\ A)=H(D)-H(D|A)</script><p>信息增益表示得知特征$A$的信息而使得集合$D$的信息的不确定性减少的程度</p>
+<p>利用信息增益<strong>进行特征选择</strong>的方法是：计算训练数据集每个特征的信息增益，并比较它们的大小，选择信息增益最大的特征</p>
+<h1 id="第六章-Logistic回归与最大熵模型"><a href="#第六章-Logistic回归与最大熵模型" class="headerlink" title="第六章 Logistic回归与最大熵模型"></a>第六章 Logistic回归与最大熵模型</h1><h2 id="6-2-最大熵模型"><a href="#6-2-最大熵模型" class="headerlink" title="6.2 最大熵模型"></a>6.2 最大熵模型</h2><h3 id="6-2-1-最大熵原理"><a href="#6-2-1-最大熵原理" class="headerlink" title="6.2.1 最大熵原理"></a>6.2.1 最大熵原理</h3><p>最大熵原理认为，学习概率模型时，在所有可能的概率模型中，<strong>熵最大</strong>的模型是最<strong>好</strong>的模型。</p>
+<h1 id="第八章-提升方法"><a href="#第八章-提升方法" class="headerlink" title="第八章 提升方法"></a>第八章 提升方法</h1><p>提升方法是这样一类方法，它采用分步的策略学习一系列简单模型，再将这些简单模型进行线性组合得到最终的模型。</p>
+<p>学习一个简单模型时，提升方法会以已有模型的预测结果为依据，调整训练数据集中每个训练样本的权重，使得当前模型更关注已有模型未能正确预测的样本，从而增强模型的预测能力。</p>
+<h1 id="第九章-EM算法及其推广"><a href="#第九章-EM算法及其推广" class="headerlink" title="第九章 EM算法及其推广"></a>第九章 EM算法及其推广</h1><p>感性认识EM： <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/102275054">如何感性地理解EM算法？</a></p>
+<h1 id="第十四章-聚类方法"><a href="#第十四章-聚类方法" class="headerlink" title="第十四章 聚类方法"></a>第十四章 聚类方法</h1><p>聚类方法是针对给定的样本，依据它们之间的相似程度，将其归并到若干个”类“中的数据分析问题。</p>
+<p>聚类的核心是相似度，或者说是距离。距离计算方法的选择是聚类的根本问题。</p>
+<p>书中介绍了层次聚类和k均值聚类两种聚类方法。</p>
+<h1 id="英文术语汇总"><a href="#英文术语汇总" class="headerlink" title="英文术语汇总"></a>英文术语汇总</h1><h2 id="第三章-k近邻法-1"><a href="#第三章-k近邻法-1" class="headerlink" title="第三章 k近邻法"></a>第三章 k近邻法</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>中文翻译</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>k-nearest neighbor, k-NN</td>
+<td>k近邻法</td>
+</tr>
+<tr>
+<td>class label</td>
+<td>类标记</td>
+</tr>
+<tr>
+<td>Euclidean distance</td>
+<td>欧氏距离</td>
+</tr>
+<tr>
+<td>Manhattan distance</td>
+<td>曼哈顿距离</td>
+</tr>
+<tr>
+<td>approximation error</td>
+<td>近似误差</td>
+</tr>
+<tr>
+<td>estimation error</td>
+<td>估计误差</td>
+</tr>
+<tr>
+<td>majority voting rule</td>
+<td>多数表决规则</td>
+</tr>
+<tr>
+<td>linear scan</td>
+<td>线性扫描</td>
+</tr>
+<tr>
+<td>partition</td>
+<td>划分</td>
+</tr>
+<tr>
+<td>median</td>
+<td>中位数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="第四章-朴素贝叶斯法"><a href="#第四章-朴素贝叶斯法" class="headerlink" title="第四章 朴素贝叶斯法"></a>第四章 朴素贝叶斯法</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>中文翻译</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>naive Bayes</td>
+<td><del>幼稚的贝叶斯（不是）</del> 朴素贝叶斯</td>
+</tr>
+<tr>
+<td>Bayesian estimation</td>
+<td>贝叶斯估计</td>
+</tr>
+<tr>
+<td>Laplacian smoothing</td>
+<td>拉普拉斯平滑</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="第五章-决策树-1"><a href="#第五章-决策树-1" class="headerlink" title="第五章 决策树"></a>第五章 决策树</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>中文翻译</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>decision tree</td>
+<td>决策树</td>
+</tr>
+<tr>
+<td>node</td>
+<td>结点</td>
+</tr>
+<tr>
+<td>directed edge</td>
+<td>有向边</td>
+</tr>
+<tr>
+<td>internal node</td>
+<td>内部结点</td>
+</tr>
+<tr>
+<td>leaf node</td>
+<td>叶结点</td>
+</tr>
+<tr>
+<td>information gain</td>
+<td>信息增益</td>
+</tr>
+<tr>
+<td>entropy</td>
+<td>熵</td>
+</tr>
+<tr>
+<td>conditional entropy</td>
+<td>条件熵</td>
+</tr>
+<tr>
+<td>empirical entropy</td>
+<td>经验熵</td>
+</tr>
+<tr>
+<td>empirical conditional entropy</td>
+<td>经验条件熵</td>
+</tr>
+<tr>
+<td>information gain ratio</td>
+<td>信息增益比</td>
+</tr>
+<tr>
+<td>classification and regression tree, CART</td>
+<td>分类与回归树</td>
+</tr>
+<tr>
+<td>Gini index</td>
+<td>基尼指数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="第六章-Logistic回归与最大熵模型-1"><a href="#第六章-Logistic回归与最大熵模型-1" class="headerlink" title="第六章 Logistic回归与最大熵模型"></a>第六章 Logistic回归与最大熵模型</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>中文翻译</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>binomial logistic regression model</td>
+<td>二项Logistic回归模型</td>
+</tr>
+<tr>
+<td>odds</td>
+<td>几率</td>
+</tr>
+<tr>
+<td>maximum entropy model</td>
+<td>最大熵模型</td>
+</tr>
+<tr>
+<td>simplex</td>
+<td>单纯形</td>
+</tr>
+<tr>
+<td>feature function</td>
+<td>特征函数</td>
+</tr>
+<tr>
+<td>log linear model</td>
+<td>对数线性模型</td>
+</tr>
+<tr>
+<td>improved iterative scaling, IIS</td>
+<td>改进的迭代尺度法</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="第七章-支持向量机"><a href="#第七章-支持向量机" class="headerlink" title="第七章 支持向量机"></a>第七章 支持向量机</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>中文翻译</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>support vector machines, SVM</td>
+<td>支持向量机</td>
+</tr>
+<tr>
+<td>convex quadratic programming</td>
+<td>凸二次规划</td>
+</tr>
+<tr>
+<td>hard margin maximization</td>
+<td>硬间隔最大化</td>
+</tr>
+<tr>
+<td>soft margin maximization</td>
+<td>软间隔最大化</td>
+</tr>
+<tr>
+<td>kernel trick</td>
+<td>核技巧</td>
+</tr>
+<tr>
+<td>kernel method</td>
+<td>核方法</td>
+</tr>
+<tr>
+<td>functional margin</td>
+<td>函数间隔</td>
+</tr>
+<tr>
+<td>geometric margin</td>
+<td>几何间隔</td>
+</tr>
+<tr>
+<td>support vector</td>
+<td>支持向量</td>
+</tr>
+<tr>
+<td>dual problem</td>
+<td>对偶问题</td>
+</tr>
+<tr>
+<td>dual algorithm</td>
+<td>对偶算法</td>
+</tr>
+<tr>
+<td>Lagrange multiplier</td>
+<td>拉格朗日乘子</td>
+</tr>
+<tr>
+<td>outlier</td>
+<td>特异点</td>
+</tr>
+<tr>
+<td>positive definite kernel function</td>
+<td>正定核函数</td>
+</tr>
+<tr>
+<td>polynomial kernel function</td>
+<td>多项式核函数</td>
+</tr>
+<tr>
+<td>Gaussian kernel function</td>
+<td>高斯核函数</td>
+</tr>
+<tr>
+<td>radial basis function</td>
+<td>径向基函数</td>
+</tr>
+<tr>
+<td>sequential minimal optimization, SMO</td>
+<td>序列最小最优化</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="第八章-提升方法-1"><a href="#第八章-提升方法-1" class="headerlink" title="第八章 提升方法"></a>第八章 提升方法</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>中文翻译</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boosting</td>
+<td>提升</td>
+</tr>
+<tr>
+<td>strongly learnable</td>
+<td>强可学习</td>
+</tr>
+<tr>
+<td>weakly learnable</td>
+<td>弱可学习</td>
+</tr>
+<tr>
+<td>probably approximately correct, PAC</td>
+<td>概率近似正确</td>
+</tr>
+<tr>
+<td>additive model</td>
+<td>加法模型</td>
+</tr>
+<tr>
+<td>forward stagewise algorithm</td>
+<td>前向分步算法</td>
+</tr>
+<tr>
+<td>boosting tree</td>
+<td>提升树</td>
+</tr>
+<tr>
+<td>decision stump</td>
+<td>决策树桩</td>
+</tr>
+<tr>
+<td>residual</td>
+<td>残差</td>
+</tr>
+<tr>
+<td>gradient boosting</td>
+<td>梯度提升</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="第九章-EM算法及其推广-1"><a href="#第九章-EM算法及其推广-1" class="headerlink" title="第九章 EM算法及其推广"></a>第九章 EM算法及其推广</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>中文翻译</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hidden variable</td>
+<td>隐变量</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="第十四章-聚类方法-1"><a href="#第十四章-聚类方法-1" class="headerlink" title="第十四章 聚类方法"></a>第十四章 聚类方法</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>中文翻译</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hierarchical clustering</td>
+<td>层次聚类</td>
+</tr>
+<tr>
+<td>k-means clustering</td>
+<td>k均值聚类</td>
+</tr>
+<tr>
+<td>similarity</td>
+<td>相似度</td>
+</tr>
+<tr>
+<td>Minkowski distance</td>
+<td>闵可夫斯基距离</td>
+</tr>
+<tr>
+<td>Mahalanobis distance</td>
+<td>马氏距离</td>
+</tr>
+<tr>
+<td>correlation coefficient</td>
+<td>相关系数</td>
+</tr>
+<tr>
+<td>hard clustering</td>
+<td>硬聚类</td>
+</tr>
+<tr>
+<td>soft clustering</td>
+<td>软聚类</td>
+</tr>
+<tr>
+<td>scatter matrix</td>
+<td>散布矩阵</td>
+</tr>
+<tr>
+<td>covariance matrix</td>
+<td>协方差矩阵</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="第十五章-奇异值分解"><a href="#第十五章-奇异值分解" class="headerlink" title="第十五章 奇异值分解"></a>第十五章 奇异值分解</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>中文翻译</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>singular value decomposition, SVD</td>
+<td>奇异值分解</td>
+</tr>
+<tr>
+<td>orthogonal matrix</td>
+<td>正交矩阵</td>
+</tr>
+<tr>
+<td>rectangular diagonal matrix</td>
+<td>矩形对角矩阵</td>
+</tr>
+<tr>
+<td>full singular value decomposition</td>
+<td>完全奇异值分解</td>
+</tr>
+<tr>
+<td>compact singular value decomposition</td>
+<td>紧奇异值分解</td>
+</tr>
+<tr>
+<td>truncated singular value decomposition</td>
+<td>截断奇异值分解</td>
+</tr>
+<tr>
+<td>Frobenius norm</td>
+<td>F范数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="第十六章-主成分分析"><a href="#第十六章-主成分分析" class="headerlink" title="第十六章 主成分分析"></a>第十六章 主成分分析</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>中文翻译</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>principal component analysis, PCA</td>
+<td>主成分分析</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
       
 
       
@@ -191,31 +654,95 @@
       
       <!--显示阅读次数-->
       
+        <a class="cloud-tie-join-count" href="/2022/06/30/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-%E7%AC%94%E8%AE%B0/" style="color:gray;font-size:14px;">
+          <span class="icon-smile"></span>
+          <span id="busuanzi_container_page_pv">
+            阅读量(<span id="busuanzi_value_page_pv"></span>)
+          </span>
+        </a>
+        
       
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/07/24/pythonNotes/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/06/30/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2022/07/10/TongJiXXFF/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          统计学习方法 李航 -- 简单记录
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/04/21/git-steps/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用git备份代码的简易步骤</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -230,175 +757,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-effectiveCpp" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/07/24/effectiveCpp/">Effective Cpp -- 读书摘抄</a>
-    </h1>
-  
-
-        
-        <a href="/2021/07/24/effectiveCpp/" class="archive-article-date">
-  	<time datetime="2021-07-24T07:42:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <img src="/2021/07/24/effectiveCpp/1.jpg" class="">
-        
-          <a class="article-more-a" href="/2021/07/24/effectiveCpp/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      <!--显示阅读次数-->
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/07/24/effectiveCpp/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E5%8F%8A%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%AE%BA"><span class="toc-number">1.</span> <span class="toc-text">第一章 统计学习及监督学习概论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E4%B8%89%E8%A6%81%E7%B4%A0"><span class="toc-number">1.1.</span> <span class="toc-text">1.3 统计学习方法三要素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.3.1 模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-%E7%AD%96%E7%95%A5"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.3.2 策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-3-%E7%AE%97%E6%B3%95"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3.3 算法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7-%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%88%A4%E5%88%AB%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text">1.7 生成模型与判别模型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-k%E8%BF%91%E9%82%BB%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">第三章 k近邻法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-k%E8%BF%91%E9%82%BB%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0%EF%BC%9Akd%E6%A0%91"><span class="toc-number">2.1.</span> <span class="toc-text">3.3 k近邻法的实现：kd树</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%86%B3%E7%AD%96%E6%A0%91"><span class="toc-number">3.</span> <span class="toc-text">第五章 决策树</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9"><span class="toc-number">3.1.</span> <span class="toc-text">5.2 特征选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-2-%E4%BF%A1%E6%81%AF%E5%A2%9E%E7%9B%8A"><span class="toc-number">3.1.1.</span> <span class="toc-text">5.2.2 信息增益</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-Logistic%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%9C%80%E5%A4%A7%E7%86%B5%E6%A8%A1%E5%9E%8B"><span class="toc-number">4.</span> <span class="toc-text">第六章 Logistic回归与最大熵模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-%E6%9C%80%E5%A4%A7%E7%86%B5%E6%A8%A1%E5%9E%8B"><span class="toc-number">4.1.</span> <span class="toc-text">6.2 最大熵模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-1-%E6%9C%80%E5%A4%A7%E7%86%B5%E5%8E%9F%E7%90%86"><span class="toc-number">4.1.1.</span> <span class="toc-text">6.2.1 最大熵原理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E6%8F%90%E5%8D%87%E6%96%B9%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">第八章 提升方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-EM%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6%E6%8E%A8%E5%B9%BF"><span class="toc-number">6.</span> <span class="toc-text">第九章 EM算法及其推广</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0-%E8%81%9A%E7%B1%BB%E6%96%B9%E6%B3%95"><span class="toc-number">7.</span> <span class="toc-text">第十四章 聚类方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%8B%B1%E6%96%87%E6%9C%AF%E8%AF%AD%E6%B1%87%E6%80%BB"><span class="toc-number">8.</span> <span class="toc-text">英文术语汇总</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-k%E8%BF%91%E9%82%BB%E6%B3%95-1"><span class="toc-number">8.1.</span> <span class="toc-text">第三章 k近邻法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%B3%95"><span class="toc-number">8.2.</span> <span class="toc-text">第四章 朴素贝叶斯法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%86%B3%E7%AD%96%E6%A0%91-1"><span class="toc-number">8.3.</span> <span class="toc-text">第五章 决策树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-Logistic%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%9C%80%E5%A4%A7%E7%86%B5%E6%A8%A1%E5%9E%8B-1"><span class="toc-number">8.4.</span> <span class="toc-text">第六章 Logistic回归与最大熵模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA"><span class="toc-number">8.5.</span> <span class="toc-text">第七章 支持向量机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E6%8F%90%E5%8D%87%E6%96%B9%E6%B3%95-1"><span class="toc-number">8.6.</span> <span class="toc-text">第八章 提升方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-EM%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6%E6%8E%A8%E5%B9%BF-1"><span class="toc-number">8.7.</span> <span class="toc-text">第九章 EM算法及其推广</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0-%E8%81%9A%E7%B1%BB%E6%96%B9%E6%B3%95-1"><span class="toc-number">8.8.</span> <span class="toc-text">第十四章 聚类方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%94%E7%AB%A0-%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3"><span class="toc-number">8.9.</span> <span class="toc-text">第十五章 奇异值分解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AD%E7%AB%A0-%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90"><span class="toc-number">8.10.</span> <span class="toc-text">第十六章 主成分分析</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-cppPrimer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/07/24/cppPrimer/">Cpp Primer,5th edition  -- 读书摘抄&amp;随想</a>
-    </h1>
-  
-
-        
-        <a href="/2021/07/24/cppPrimer/" class="archive-article-date">
-  	<time datetime="2021-07-24T05:57:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <img src="/2021/07/24/cppPrimer/1.jpg" class="">
-        
-          <a class="article-more-a" href="/2021/07/24/cppPrimer/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      <!--显示阅读次数-->
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/07/24/cppPrimer/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/5/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -430,8 +814,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: [object Object],
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
